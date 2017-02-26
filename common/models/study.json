@@ -1,0 +1,33 @@
+{
+  "name": "study",
+  "plural": "studies",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "additionalinfo": {
+      "type": "string"
+    },
+    "photo": {
+      "type": "string"
+    },
+    "fundingneeded": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

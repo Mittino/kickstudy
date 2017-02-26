@@ -14,7 +14,8 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "db",
+    "public": false
   },
   "AccessToken": {
     "dataSource": "db",
@@ -33,6 +34,14 @@
     "public": false
   },
   "user": {
+    "dataSource": "db",
+    "public": true
+  },
+  "study": {
+    "dataSource": "db",
+    "public": true
+  },
+  "payment": {
     "dataSource": "db",
     "public": true
   }
