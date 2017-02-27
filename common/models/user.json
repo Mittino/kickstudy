@@ -30,7 +30,19 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "payment": {
+      "type": "hasMany",
+      "model": "payment",
+      "foreignKey": "funder",
+      "through": "payment"
+    },
+    "study": {
+      "type": "hasMany",
+      "model": "study",
+      "foreignKey": "researcherid"
+    }
+  },
   "acls": [],
   "methods": {}
 }

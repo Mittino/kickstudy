@@ -27,7 +27,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "researcher": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "researcherid"
+    }
+  },
   "acls": [],
   "methods": {}
 }

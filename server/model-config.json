@@ -14,35 +14,35 @@
     ]
   },
   "User": {
-    "dataSource": "db",
+    "dataSource": "mongodb",
     "public": false
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "mongodb",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "mongodb",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "mongodb",
     "public": false
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "mongodb",
     "public": false
   },
   "user": {
-    "dataSource": "db",
+    "dataSource": "mongodb",
     "public": true
   },
   "study": {
-    "dataSource": "db",
+    "dataSource": "mongodb",
     "public": true
   },
   "payment": {
-    "dataSource": "db",
+    "dataSource": "mongodb",
     "public": true
   }
 }

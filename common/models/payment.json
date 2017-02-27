@@ -17,7 +17,18 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "funder": {
+      "type": "hasOne",
+      "model": "user",
+      "foreignKey": "funderid"
+    },
+    "study": {
+      "type": "belongsTo",
+      "model": "study",
+      "foreignKey": "studyid"
+    }
+  },
   "acls": [],
   "methods": {}
 }
