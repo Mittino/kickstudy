@@ -11,7 +11,7 @@ module.exports = function(app) {
     {username: 'penny', email: 'penny@me.com', password: 'password', firstname:'Penny', lastname: 'Hofstader', nickname: 'penny'},
     {username: 'myaccount', email: 'anna@me.com', password: 'password', firstname: 'Anna', lastname:"M", nickname: 'mittino'},
   ], function(err, users) {
-    if (err) throw err;
+    if (err) console.log(err); return;
 
     console.log('Created users:', users);
 
@@ -20,7 +20,7 @@ module.exports = function(app) {
       {title: 'Funding to Research Trains', description: 'I want to do some research on making train transportation more energy efficient.', additionalinfo: 'I like trains and more people should be riding them.', fundingneeded: '50000', researcherid: users[0].id},
       {title: 'Lactose Inolerance and Probiotics', description: 'As a sufferer of lactose intollerance, I have a theory that probiotics may help improve the symptoms.', additionalinfo: 'I like trains and more people should be riding them.', fundingneeded: '80000', researcherid: users[1].id}
     ], function(err, studies) {
-      if (err) throw err;
+      if (err) console.log(err); return;
 
       console.log('Created studies:', studies);
 
@@ -30,7 +30,7 @@ module.exports = function(app) {
         funderid: users[0].id,
         studyid: studies[1].id
       }, function(err, payments) {
-        if (err) throw err;
+        if (err) console.log(err); return;
         console.log('Created payment:', payments);
 
       });
@@ -41,7 +41,7 @@ module.exports = function(app) {
         funderid: users[1].id,
         studyid: studies[0].id
       }, function(err, payments) {
-        if (err) throw err;
+        if (err) console.log(err); return;
         console.log('Created payment:', payments);
 
       });
@@ -51,7 +51,7 @@ module.exports = function(app) {
     Role.create({
       name: 'admin'
     }, function(err, role) {
-      if (err) throw err;
+      if (err) console.log(err); return;
 
       console.log('Created role:', role);
 
@@ -60,7 +60,7 @@ module.exports = function(app) {
         principalType: RoleMapping.USER,
         principalId: users[3].id
       }, function(err, principal) {
-        if (err) throw err;
+        if (err) console.log(err); return;
 
         console.log('Created principal:', principal);
       });
@@ -70,7 +70,7 @@ module.exports = function(app) {
     Role.create({
       name: 'standard'
     }, function(err, role) {
-      if (err) throw err;
+      if (err) console.log(err); return;
 
       console.log('Created role:', role);
 
@@ -78,7 +78,7 @@ module.exports = function(app) {
         principalType: RoleMapping.USER,
         principalId: users[2].id
       }, function(err, principal) {
-        if (err) throw err;
+        if (err) console.log(err); return;
 
         console.log('Created principal:', principal);
       });
@@ -88,7 +88,7 @@ module.exports = function(app) {
     Role.create({
       name: 'researcher'
     }, function(err, role) {
-      if (err) throw err;
+      if (err) console.log(err); return;
 
       console.log('Created role:', role);
 
@@ -99,7 +99,7 @@ module.exports = function(app) {
           principalId: users[1].id
         }
     ], function(err, principal) {
-        if (err) throw err;
+        if (err) console.log(err); return;
 
         console.log('Created principal:', principal);
       });
