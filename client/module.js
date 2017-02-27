@@ -1,5 +1,6 @@
 (function(){
-  angular.module("myApp", ['ui.router','ngRoute','lbServices']);
-//'ngRoute','lbServices'
+  angular.module("myApp", ['ui.router']);
 
 })();
+//,'$resourceProvider'
+//'ngRoute','lbServices'
