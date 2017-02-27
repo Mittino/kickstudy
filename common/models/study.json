@@ -32,6 +32,11 @@
       "type": "belongsTo",
       "model": "user",
       "foreignKey": "researcherid"
+    },
+    "payments": {
+      "type": "hasMany",
+      "model": "payment",
+      "foreignKey": "paymentid"
     }
   },
   "acls": [],

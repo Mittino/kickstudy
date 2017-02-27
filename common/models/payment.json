@@ -19,7 +19,7 @@
   "validations": [],
   "relations": {
     "funder": {
-      "type": "hasOne",
+      "type": "belongsTo",
       "model": "user",
       "foreignKey": "funderid"
     },

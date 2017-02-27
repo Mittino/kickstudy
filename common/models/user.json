@@ -34,7 +34,7 @@
     "payment": {
       "type": "hasMany",
       "model": "payment",
-      "foreignKey": "funder",
+      "foreignKey": "funderid",
       "through": "payment"
     },
     "study": {

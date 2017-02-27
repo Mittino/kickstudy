@@ -15,6 +15,38 @@ module.exports = function(app) {
 
     console.log('Created users:', users);
 
+    //create first study
+    Study.create([
+      {title: 'Funding to Research Trains', description: 'I want to do some research on making train transportation more energy efficient.', additionalinfo: 'I like trains and more people should be riding them.', fundingneeded: '50000', researcherid: users[0].id},
+      {title: 'Lactose Inolerance and Probiotics', description: 'As a sufferer of lactose intollerance, I have a theory that probiotics may help improve the symptoms.', additionalinfo: 'I like trains and more people should be riding them.', fundingneeded: '80000', researcherid: users[1].id}
+    ], function(err, studies) {
+      if (err) throw err;
+
+      console.log('Created studies:', studies);
+
+      Payment.create({
+        amount: '20000',
+        date: '1/1/2017',
+        funderid: users[0].id,
+        studyid: studies[1].id
+      }, function(err, payments) {
+        if (err) throw err;
+        console.log('Created payment:', payments);
+
+      });
+    //create second payment
+      Payment.create({
+        amount: '1000',
+        date: '1/1/2017',
+        funderid: users[1].id,
+        studyid: studies[0].id
+      }, function(err, payments) {
+        if (err) throw err;
+        console.log('Created payment:', payments);
+
+      });
+    });
+
     //create the admin role
     Role.create({
       name: 'admin'
@@ -32,24 +64,27 @@ module.exports = function(app) {
 
         console.log('Created principal:', principal);
       });
-
-      Role.create({
-        name: 'standard'
-      }, function(err, role) {
-        if (err) throw err;
-
-        console.log('Created role:', role);
-
-        role.principals.create({
-          principalType: RoleMapping.USER,
-          principalId: users[2].id
-        }, function(err, principal) {
-          if (err) throw err;
-
-          console.log('Created principal:', principal);
-        });
     });
 
+    //create standard role
+    Role.create({
+      name: 'standard'
+    }, function(err, role) {
+      if (err) throw err;
+
+      console.log('Created role:', role);
+
+      role.principals.create({
+        principalType: RoleMapping.USER,
+        principalId: users[2].id
+      }, function(err, principal) {
+        if (err) throw err;
+
+        console.log('Created principal:', principal);
+      });
+    });
+
+    //create researcher role
     Role.create({
       name: 'researcher'
     }, function(err, role) {
@@ -68,46 +103,6 @@ module.exports = function(app) {
 
         console.log('Created principal:', principal);
       });
-  });
-
-  // users[2].payment.create({
-  //   amount: '20000',
-  //   date: '1/1/2017'
-  // }, function(err, payments) {
-  //   if (err) throw err;
-  //   console.log('Created payment:', payments);
-  //
-  // });
-  //
-  // users[1].payment.create([
-  //   {amount: '1000', date: '1/1/2017'},
-  //
-  // ], function(err, payments) {
-  //   if (err) throw err;
-  //   console.log('Created payment:', payments);
-  //
-  // });
-
-  users[0].study.create([
-    {title: 'Funding to Research Trains', description: 'I want to do some research on making train transportation more energy efficient.', additionalinfo: 'I like trains and more people should be riding them.', fundingneeded: '50000'},
-
-  ], function(err, studies) {
-    if (err) throw err;
-
-    console.log('Created studies:', studies);
-  });
-
-  users[1].study.create([
-    {title: 'Lactose Inolerance and Probiotics', description: 'As a sufferer of lactose intollerance, I have a theory that probiotics may help improve the symptoms.', additionalinfo: 'I like trains and more people should be riding them.', fundingneeded: '80000'},
-  ], function(err, studies) {
-    if (err) throw err;
-
-    console.log('Created studies:', studies);
-  });
-
-
-
-  });
-
+    });
   });
 };
