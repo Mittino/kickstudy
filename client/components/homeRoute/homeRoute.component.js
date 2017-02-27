@@ -3,7 +3,7 @@
   angular.module("myApp")
   .component("homeRoute", {
     controller: homeRouteController,
-    templateUrl: './homeRoute.html'
+    templateUrl: 'homeRoute/homeRoute.html'
   });
 
 function homeRouteController(){

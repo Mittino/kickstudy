@@ -1,13 +1,20 @@
 (function(){
+console.log('application component')
   angular.module("myApp")
-    .component("application",{
+    .component("application", {
       controller: applicationController,
-      templateUrl: './application.html'
+      templateUrl:"application/application.html"
+
+
     });
 
-function applicationController(){
-  var vm = this;
+    function applicationController(){
+      var vm = this;
+      console.log("hi");
 
-}
+      vm.$onInit = function onInit(){
+        console.log("hi2");
+      };
+    }
 
 })();
