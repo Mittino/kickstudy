@@ -6,8 +6,7 @@
 
   function config($locationProvider, $urlRouterProvider, $stateProvider){
     $urlRouterProvider.otherwise('/home');
-  $locationProvider.html5Mode(true);
-    console.log("config")
+    $locationProvider.html5Mode(true);
 
     $stateProvider
       .state('application', {
@@ -19,6 +18,6 @@
         component:'homeRoute',
         parent:'application'
       });
-console.log("config 2")
+
   }
 })();

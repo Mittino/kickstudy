@@ -4,15 +4,14 @@ body {
 
 .nav-wrapper{
   background-color: white;
-  display: flex;
-  flex-flow: row nowrap;
 }
 
 nav .brand-logo{
   font-family: 'Shadows Into Light', cursive;
   font-size: 38px;
-  position: relative;
   color:#D64933;
+  max-height: 58px;
+  margin: 3px 0px 3px 15px;
 }
 
 .logo{
@@ -20,6 +19,17 @@ nav .brand-logo{
   max-height: 58px;
   margin: 3px 0px 3px 15px;
   align-self: auto;
+}
+
+nav material-icons{
+  color: black;
+}
+
+nav ul a{
+  color:#D64933;
+  font-size: 18px;
+  font-family: 'Hind Vadodara', sans-serif;
+  margin-right: 15px;
 }
 
 h3{
@@ -30,9 +40,11 @@ h3{
 h5{
   font-family: 'Merriweather', serif;
 }
+
 .slider .indicators .indicator-item {
   background-color: lightgrey;
 }
+
 .slider .indicators .indicator-item.active {
   background-color:  #D64933;
 }
@@ -100,6 +112,14 @@ ul.circle {
     .logo{
       max-height: 50px;
     }
+    nav ul {
+      display: flex;
+      flex-flow: row;
+    }
+    nav ul a{
+      margin-right: 5px;
+    }
+
 }
 
 @media (max-width: 1000px){
@@ -112,5 +132,9 @@ ul.circle {
   .small-card-size{
     flex: 1 1 45%;
     margin: 15px;
+  }
+  nav ul {
+    display: flex;
+    flex-flow: row;
   }
 }

@@ -6,9 +6,9 @@
     templateUrl: '/components/homeRoute/homeRoute.html'
   });
 
-function homeRouteController(){
- var vm = this;
- console.log('homeRouteController');
-}
+  function homeRouteController(){
+   var vm = this;
+   console.log('homeRouteController');
+  }
 
 })();
