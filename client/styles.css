@@ -1,3 +1,7 @@
+body .landingBackground {
+    background-image: url("./photos/grey_wash_wall_@2X.png");
+}
+
 body {
     background-image: url("./photos/grey_wash_wall_@2X.png");
 }
@@ -86,6 +90,7 @@ ul.circle {
   flex: 1 1 25%;
   margin: 15px;
 }
+
 
 @media (max-width: 700px){
     .card-container{
