@@ -4,7 +4,20 @@
     .config(routerConfig);
 
   function httpInterceptorConfig($httpProvider) {
-    // TODO: Interceptor goes here...
+    $httpProvider.interceptors.push(function($q, $location, LoopBackAuth) {
+      return {
+        responseError: function(rejection) {
+          if (rejection.status == 401) {
+          // Clearing the loopback values from client browser for safe logout...
+            LoopBackAuth.clearUser();
+            LoopBackAuth.clearStorage();
+            $location.nextAfterLogin = $location.path();
+            $location.path('/login');
+          }
+          return $q.reject(rejection);
+        }
+      };
+    });
   }
 
   routerConfig.$inject = ['$locationProvider', '$urlRouterProvider', '$stateProvider'];
@@ -26,6 +39,16 @@
       .state('landingRoute', {
         url:'/kickstudy',
         component:'landingRoute',
+        parent:'application'
+      })
+      .state('login', {
+        url:'/login',
+        component:'login',
+        parent:'application'
+      })
+      .state('signUp', {
+        url:'/signUp',
+        component:'signUp',
         parent:'application'
       });
   }

@@ -2,16 +2,11 @@
 <nav>
   <div class="nav-wrapper">
     <img src="photos/logo_image.png" class="logo">
-    <a href="#" class="brand-logo">KickStudy</a>
-    <ul class="right" ng-if="!$ctrl.login">
-      <li><a ng-click="$ctrl.showLogin()">Login</a></li>
-    </ul>
-    <ul class="right" ng-if="$ctrl.login">
-      <li><a ng-click="$ctrl.showLogin()">Close</a></li>
+    <a href="/" class="brand-logo">KickStudy</a>
+    <ul class="right">
+      <li><a ng-click="$ctrl.login()">Login</a></li>
     </ul>
   </div>
 </nav>
-
-<login ng-if="$ctrl.login" login="$ctrl.login"></login>
 
 <ui-view></ui-view>

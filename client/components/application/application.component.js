@@ -8,7 +8,7 @@ console.log('application component')
 
     });
 
-    function applicationController(){
+    function applicationController($state){
       var vm = this;
       console.log("hi");
 
@@ -16,9 +16,9 @@ console.log('application component')
         console.log("hi2");
       };
 
-      vm.showLogin = function(){
-        vm.login = !vm.login;
-        console.log(vm.login, "login");
+      vm.login = function(){
+        console.log("clicked");
+         $state.go('login');
       };
 
 

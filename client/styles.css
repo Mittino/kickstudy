@@ -1,8 +1,3 @@
-.login {
-    background: white;
-    text-color: black;
-}
-
 body {
     background-image: url("./photos/grey_wash_wall_@2X.png");
 }
@@ -92,6 +87,18 @@ ul.circle {
   margin: 15px;
 }
 
+.login {
+  margin: 40px 0 15px 0;
+  padding: 40px 0 40px 0;
+}
+
+.btn{
+  background-color:#D64933;
+  margin-bottom: 15px;
+}
+.btn:hover{
+  background-color: #93CDD6;
+}
 
 @media (max-width: 700px){
     .card-container{
