@@ -15,6 +15,12 @@ console.log('application component')
       vm.$onInit = function onInit(){
         console.log("hi2");
       };
-    }
 
+      vm.showLogin = function(){
+        vm.login = !vm.login;
+        console.log(vm.login, "login");
+      };
+
+
+    }
 })();

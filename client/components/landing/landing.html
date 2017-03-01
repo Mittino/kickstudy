@@ -1,20 +1,4 @@
 <div class="landingBackground">
-  <!--navbar -->
-  <nav>
-    <div class="nav-wrapper">
-      <img src="photos/logo_image.png" class="logo">
-      <a href="#" class="brand-logo">KickStudy</a>
-      <ul class="right" ng-if="!$ctrl.login">
-        <li><a href="sass.html" ng-click="$ctrl.showLogin()">Login</a></li>
-      </ul>
-      <ul class="right" ng-if="$ctrl.login">
-        <li><a href="sass.html" ng-click="$ctrl.showLogin()">Close</a></li>
-      </ul>
-    </div>
-  </nav>
-<!-- login form -->
-
-  <login ng-if="$ctrl.login" login="$ctrl.login"></login>
 
 <!-- slider -->
   <div class="slider" slider>

@@ -1,10 +1,15 @@
 (function(){
   angular.module("myApp")
-    .config(config);
+    .config(httpInterceptorConfig)
+    .config(routerConfig);
 
-  config.$inject = ['$locationProvider', '$urlRouterProvider', '$stateProvider'];
+  function httpInterceptorConfig($httpProvider) {
+    // TODO: Interceptor goes here...
+  }
 
-  function config($locationProvider, $urlRouterProvider, $stateProvider){
+  routerConfig.$inject = ['$locationProvider', '$urlRouterProvider', '$stateProvider'];
+
+  function routerConfig($locationProvider, $urlRouterProvider, $stateProvider){
     $urlRouterProvider.otherwise('/kickstudy');
     $locationProvider.html5Mode(true);
 
@@ -23,6 +28,5 @@
         component:'landingRoute',
         parent:'application'
       });
-
   }
 })();
