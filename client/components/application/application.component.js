@@ -21,6 +21,10 @@ console.log('application component')
          $state.go('login');
       };
 
+      vm.createAccount = function(){
+        $state.go('profile');
+      }
+
 
     }
 })();

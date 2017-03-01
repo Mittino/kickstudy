@@ -46,9 +46,9 @@
         component:'login',
         parent:'application'
       })
-      .state('signUp', {
-        url:'/signUp',
-        component:'signUp',
+      .state('profile', {
+        url:'/profile',
+        component:'profile',
         parent:'application'
       });
   }

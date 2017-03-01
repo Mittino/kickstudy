@@ -1,0 +1,55 @@
+
+<form ng-submit="$ctrl.submitUserForm()">
+  <div class="row">
+    <div class="card col s8 offset-s2 login">
+
+      <div class= "row">
+        <div class="input-field col offset-m1 m4 s12">
+          <input id="email" type="text" class="validate" ng-model="$ctrl.userForm.email" required>
+          <label for="email">Email</label>
+        </div>
+      <div class="input-field col offset-m1 m4 s12">
+        <input id="password" type="password" class="validate" ng-model="$ctrl.userForm.password" required>
+        <label for="password">Password</label>
+      </div>
+    </div>
+
+    <div class= "row">
+      <div class="input-field col offset-m1 m4 s12">
+        <input id="firstname" type="text" class="validate" ng-model="$ctrl.userForm.firstname" required>
+        <label for="email">First Name</label>
+      </div>
+      <div class="input-field col offset-m1 m4 s12">
+        <input id="lastname" type="text" class="validate" ng-model="$ctrl.userForm.lastname" required>
+        <label for="password">Last Name</label>
+      </div>
+    </div>
+
+    <div class= "row">
+      <div class="input-field col offset-m1 m4 s12">
+        <input id="nickname" type="text" class="validate" ng-model="$ctrl.userForm.nickname" required>
+        <label for="email">Nickname</label>
+      </div>
+      <div class="input-field col offset-m1 m4 s12">
+        <input id="photo" type="text" class="validate" ng-model="$ctrl.userForm.photo">
+        <label for="password">Photo</label>
+      </div>
+    </div>
+
+    <div class= "row">
+      <div class="input-field col offset-m1 m4 s12">
+        <input id="bio" type="text" class="validate" ng-model="$ctrl.userForm.bio">
+        <label for="email">Bio</label>
+      </div>
+      <div class="input-field col offset-m1 m4 s12">
+        <input id="personalsite" type="text" class="validate" ng-model="$ctrl.userForm.personalsite">
+        <label for="password">Personal Website Link</label>
+      </div>
+    </div>
+
+    <div class="center">
+      <button class="waves-effect waves-light btn center" type="submit">Submit</button>
+
+    </div>
+  </div>
+</form>
