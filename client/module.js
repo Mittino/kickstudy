@@ -1,6 +1,9 @@
 (function(){
-  angular.module("myApp", ['ui.router','lbServices', 'ui.materialize']);
-  console.log("module js");
+  angular.module("myApp", ['ui.router', 'ui.materialize','ngRoute', 'ngResource','lbServices'])
+
+    // .config(['$resourceProvider', function($resourceProvider) {
+    //   // Don't strip trailing slashes from calculated URLs
+    //   $resourceProvider.defaults.stripTrailingSlashes = false;
+    // }]);
+
 })();
-//,'$resourceProvider'
-//'ngRoute','lbServices'
