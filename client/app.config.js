@@ -50,6 +50,12 @@
         url:'/profile',
         component:'profile',
         parent:'application'
+      })
+      .state('searchRoute', {
+        url:'/search',
+        component:'searchRoute',
+        parent:'application'
       });
+
   }
 })();

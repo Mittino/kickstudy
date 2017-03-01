@@ -1,4 +1,31 @@
-<div> Home Route Here </div>
+
+      <div class="row">
+        <div class="col offset-m1 s12 m10">
+          <div class="card">
+            <div class="card-content black-text">
+              <span class="card-title center">Welcome - Username goes here</span>
+              <p> What are you interested in learning about today?</p>
+                <input placeholder="Search" type="text" class="validate">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row card-container">
+        <div class="card large-card-size">
+          <div class="card-content black-text">
+            <span class="card-title">Recently Added</span>
+          </div>
+        </div>
 
 
-<home></home>
+      <div class="card large-card-size">
+        <div class="card-content black-text">
+          <span class="card-title">Studies You've Funded</span>
+          <div>
+            <payment payment="payment" ng-repeat="payment in $ctrl.payments"></payment>
+          </div>
+
+        </div>
+      </div>
+    </div>

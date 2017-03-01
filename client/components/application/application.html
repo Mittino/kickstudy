@@ -3,10 +3,18 @@
   <div class="nav-wrapper">
     <img src="photos/logo_image.png" class="logo">
     <a href="/" class="brand-logo">KickStudy</a>
-    <ul class="right">
+
+    <ul ng-if="!$ctrl.loginStatus" class="right">
       <li><a ng-click="$ctrl.login()">Login</a></li>
       <li><a ng-click="$ctrl.createAccount()">Create Account</a></li>
+      <li><a ng-click="$ctrl.search()">Search</a></li>
     </ul>
+
+    <!-- <ul ng-if="$ctrl.loginStatus" class="right">
+      <li><a ng-click="$ctrl.login()">Logout</a></li>
+      <li><a ng-click="$ctrl.createAccount()">Profile</a></li>
+    </ul> -->
+
   </div>
 </nav>
 

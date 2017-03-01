@@ -11,6 +11,7 @@ console.log('application component')
     function applicationController($state){
       var vm = this;
       console.log("hi");
+      vm.loginStatus = null;
 
       vm.$onInit = function onInit(){
         console.log("hi2");
@@ -23,6 +24,14 @@ console.log('application component')
 
       vm.createAccount = function(){
         $state.go('profile');
+      }
+
+      vm.loggedIn = function(){
+        vm.loginStatus = !vm.loginStatus;
+      };
+
+      vm.search = function(){
+        $state.go('searchRoute');
       }
 
 

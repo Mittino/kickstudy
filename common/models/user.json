@@ -43,6 +43,21 @@
       "foreignKey": "researcherid"
     }
   },
-  "acls": [],
+  "acls": [{
+    "principalType": "ROLE",
+    "principalId": "$authenticated",
+    "permission": "ALLOW",
+    "property": "__get_user"
+  }, {
+    "principalType": "ROLE",
+    "principalId": "$owner",
+    "permission": "ALLOW",
+    "property": "__get__payment"
+  }, {
+    "principalType": "ROLE",
+    "principalId": "$authenticated",
+    "permission": "ALLOW",
+    "property": "__get__study"
+  }],
   "methods": {}
 }

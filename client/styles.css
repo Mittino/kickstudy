@@ -65,6 +65,13 @@ ul.circle {
   color: #D64933;
 }
 
+.small-heading{
+  font-family: 'Hind Vadodara', sans-serif;
+  font-size: 15px;
+  color: black;
+  font-weight: bold;
+}
+
 .card-container{
   display: flex;
   margin-left:75px;
@@ -92,6 +99,10 @@ ul.circle {
   padding: 40px 0 40px 0;
 }
 
+.card-padding {
+  padding: 15px 15px 15px 15px;
+}
+
 .btn{
   background-color:#D64933;
   margin-bottom: 15px;
@@ -99,6 +110,8 @@ ul.circle {
 .btn:hover{
   background-color: #93CDD6;
 }
+
+
 
 @media (max-width: 700px){
     .card-container{
