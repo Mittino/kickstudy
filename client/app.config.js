@@ -46,9 +46,14 @@
         component:'login',
         parent:'application'
       })
-      .state('profile', {
-        url:'/profile',
-        component:'profile',
+      .state('editProfileRoute', {
+        url:'/editProfile',
+        component:'editProfileRoute',
+        parent:'application'
+      })
+      .state('newProfileRoute', {
+        url:'/newProfile',
+        component:'newProfileRoute',
         parent:'application'
       })
       .state('searchRoute', {

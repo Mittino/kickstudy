@@ -8,6 +8,7 @@
       <li ng-if="$ctrl.User.isAuthenticated()"><a ng-click="$ctrl.home()">Home </a></li>
       <li ng-if="!$ctrl.User.isAuthenticated()"><a ng-click="$ctrl.createAccount()">Create Account</a></li>
       <li ng-if="$ctrl.User.isAuthenticated()"><a ng-click="$ctrl.search()">Studies</a></li>
+      <li ng-if="$ctrl.User.isAuthenticated()"><a ng-click="$ctrl.editProfile()">Profile </a></li>
       <li ng-if="!$ctrl.User.isAuthenticated()"><a ng-click="$ctrl.login()">Login </a></li>
       <li ng-if="$ctrl.User.isAuthenticated()"><a  ng-click="$ctrl.logout()">Logout</a></li>
     </ul>

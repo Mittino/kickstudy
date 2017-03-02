@@ -16,15 +16,12 @@ console.log('application component')
     //   vm.status = User.isAuthenticated();
     //   console.log(vm.status);
     // };
-
-
       vm.login = function(){
-        console.log("clicked");
          $state.go('login');
       };
 
       vm.createAccount = function(){
-        $state.go('profile');
+        $state.go('newProfileRoute');
       };
 
       vm.search = function(){
@@ -38,6 +35,11 @@ console.log('application component')
 
       vm.home = function(){
         $state.go('homeRoute');
+      };
+
+      vm.editProfile = function(){
+        console.log("clicked profile");
+        $state.go('editProfileRoute');
       };
 
 
