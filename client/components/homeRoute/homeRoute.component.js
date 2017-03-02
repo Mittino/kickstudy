@@ -32,7 +32,9 @@
      Payment.find({
        filter: {
          where: {
-           funderid: vm.id}
+           funderid: vm.id
+         },
+         include: 'study'
         }
       })
       .$promise

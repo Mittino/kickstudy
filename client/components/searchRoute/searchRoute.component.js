@@ -10,7 +10,11 @@
     vm.studies = [];
 
      vm.$onInit = function getStudies(){
-       vm.studies = Study.find().$promise
+       Study.find({
+         filter: {
+          include: 'researcher'
+         }
+       }).$promise
          .then(function(response){
          console.log(response);
          vm.studies = response;
