@@ -13,7 +13,7 @@
         User.create(vm.userForm).$promise
         .then(function(response){
           console.log(response);
-          $state.go('homeRoute');
+          $state.go('login');
         }).catch(function(err){
           console.log(err);
         });

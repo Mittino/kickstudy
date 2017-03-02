@@ -27,12 +27,13 @@ console.log('application component')
         $state.go('profile');
       };
 
-      vm.loggedIn = function(){
-        vm.loginStatus = !vm.loginStatus;
-      };
-
       vm.search = function(){
         $state.go('searchRoute');
+      };
+
+      vm.logout = function(){
+        User.logout();
+        $state.go('landingRoute');
       };
 
 
