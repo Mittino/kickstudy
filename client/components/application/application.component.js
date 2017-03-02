@@ -10,12 +10,7 @@ console.log('application component')
 
     function applicationController($state){
       var vm = this;
-      console.log("hi");
       vm.loginStatus = null;
-
-      vm.$onInit = function onInit(){
-        console.log("hi2");
-      };
 
       vm.login = function(){
         console.log("clicked");

@@ -1,1 +1,17 @@
-<div>Search </div>
+
+<div>
+  <div class="row">
+    <div class="card col offset-m2 m8">
+      <div class="card-content black-text">
+
+          <input type="search" placeholder="Search" ng-model="searchText">
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row small-card-container">
+  <study study="study" ng-repeat="study in $ctrl.studies | filter:searchText"></study>
+</div>
