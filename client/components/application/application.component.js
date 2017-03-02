@@ -38,7 +38,6 @@ console.log('application component')
       };
 
       vm.editProfile = function(){
-        console.log("clicked profile");
         $state.go('editProfileRoute');
       };
 

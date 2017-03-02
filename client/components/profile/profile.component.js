@@ -2,23 +2,36 @@
   angular.module("myApp")
     .component("profile", {
       controller: profileController,
-      templateUrl: '/components/profile/profile.html'
+      templateUrl: '/components/profile/profile.html',
+      bindings: {
+        user: '<',
+        submitUserData: '&'
+      }
     });
 
     function profileController(User, $state){
       var vm = this;
-      vm.userForm = {};
 
-      vm.submitUserForm = function(){
-        User.create(vm.userForm).$promise
-        .then(function(response){
-          console.log(response);
-          $state.go('login');
-        }).catch(function(err){
-          console.log(err);
-        });
+
+      vm.$onChanges = function(){
+        vm.userForm = angular.copy(vm.user);
+        console.log(vm.user);
       };
 
-    }
+      // vm.submitUserForm = function(){
+        // User.create(vm.userForm).$promise
+        // .then(function(response){
+        //   console.log(response);
+        //   $state.go('login');
+        // }).catch(function(err){
+        //   console.log(err);
+        // });
+      // };
+      vm.submitUserForm = function(){
+        console.log(vm.userForm);
+        vm.submitUserData({data:vm.userForm});
+      }
+
+   }
 
 })();
