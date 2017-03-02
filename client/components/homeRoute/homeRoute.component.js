@@ -6,13 +6,20 @@
     templateUrl: '/components/homeRoute/homeRoute.html'
   });
 
-  function homeRouteController(Study, User, Payment){
+  function homeRouteController(Study, User, Payment, LoopBackAuth){
    var vm = this;
    console.log('homeRouteController');
 
    vm.$onInit = function getFundedStudies(){
      vm.id = User.getCurrentId();
-     console.log(vm.id, "id");
+
+     User.getCurrent().$promise
+      .then(function(response){
+        vm.currentUser = response;
+        console.log(response);
+      }).catch(function(err){
+        console.log(err);
+      });
 
     //  User.find({
     //    fileter: {

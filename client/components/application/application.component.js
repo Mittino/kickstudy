@@ -36,6 +36,10 @@ console.log('application component')
         $state.go('landingRoute');
       };
 
+      vm.home = function(){
+        $state.go('homeRoute');
+      };
+
 
     }
 })();
