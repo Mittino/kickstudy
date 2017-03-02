@@ -8,9 +8,15 @@ console.log('application component')
 
     });
 
-    function applicationController($state){
+    function applicationController($state, User){
       var vm = this;
-      vm.loginStatus = null;
+      vm.User = User;
+
+    // vm.$onInit = function() {
+    //   vm.status = User.isAuthenticated();
+    //   console.log(vm.status);
+    // };
+
 
       vm.login = function(){
         console.log("clicked");
@@ -19,7 +25,7 @@ console.log('application component')
 
       vm.createAccount = function(){
         $state.go('profile');
-      }
+      };
 
       vm.loggedIn = function(){
         vm.loginStatus = !vm.loginStatus;
@@ -27,7 +33,7 @@ console.log('application component')
 
       vm.search = function(){
         $state.go('searchRoute');
-      }
+      };
 
 
     }
