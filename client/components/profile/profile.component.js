@@ -15,7 +15,6 @@
 
       vm.$onChanges = function(){
         vm.userForm = angular.copy(vm.user);
-        console.log(vm.user);
       };
 
       // vm.submitUserForm = function(){
@@ -28,7 +27,6 @@
         // });
       // };
       vm.submitUserForm = function(){
-        console.log(vm.userForm);
         vm.submitUserData({data:vm.userForm});
       }
 

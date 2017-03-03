@@ -16,8 +16,8 @@
          }
        }).$promise
          .then(function(response){
-         console.log(response);
          vm.studies = response;
+         console.log(vm.studies);
         }).catch(function(err){
          console.log(err);
          });

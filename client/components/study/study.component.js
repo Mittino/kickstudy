@@ -10,7 +10,7 @@
 
   function studyController(){
     var vm = this;
-    
+
 
 
   }

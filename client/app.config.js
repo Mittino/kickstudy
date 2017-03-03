@@ -60,6 +60,11 @@
         url:'/search',
         component:'searchRoute',
         parent:'application'
+      })
+      .state('studyRoute', {
+        url:'/study',
+        component:'studyRoute',
+        parent:'application'
       });
 
   }

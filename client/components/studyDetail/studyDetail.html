@@ -1,0 +1,34 @@
+<div class="card small-card-size">
+  <div class="card-content black-text">
+    <span class="card-title">{{$ctrl.study[0].title}}</span>
+    <div class="row">
+
+      <div class="col m6">
+        <p class="small-heading">Description:</p>
+        <p>{{$ctrl.study[0].description}}</p>
+        <p class="small-heading">Additional Information:</p>
+        <p>{{$ctrl.study[0].additionalinfo}}</p>
+      </div>
+
+    <div class="col m6">
+      <p class="small-heading">Funding Needed: </p>
+      <p>{{$ctrl.study[0].fundingneeded | currency}}</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col m6">
+      <p class="small-heading">Researcher: {{$ctrl.study[0].researcher.firstname}} {{$ctrl.study[0].researcher.lastname}}</p>
+      <p class="small-heading"> Nickname: {{$ctrl.study[0].researcher.nickname}}</p>
+      <p class="small-heading"> Bio: {{$ctrl.study[0].researcher.bio}}</p>
+      <p class="small-heading">Photo:</p>
+      <p>{{$ctrl.study[0].photo}}</p>
+      <p class="small-heading">Personal Website: {{$ctrl.study[0].personalsite}}</p>
+    </div>
+
+    </div>
+  </div>
+
+
+</div>
+<div>{{$ctrl.study[0]}}</div>
