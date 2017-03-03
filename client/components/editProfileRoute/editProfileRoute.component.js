@@ -5,7 +5,7 @@
       templateUrl: "/components/editProfileRoute/editProfileRoute.html"
     });
 
-  function editProfileRouteController(User){
+  function editProfileRouteController(User, $state){
     var vm = this;
 
     User.getCurrent().$promise
@@ -18,18 +18,23 @@
 
     vm.submitUserForm = function(data){
       console.log(data.id);
-      User.patchOrCreate({
-        filter:{
-          where: {
-            id: data.id
-          }
+      User.prototype$updateAttributes(
+        {
+          id:data.id,
+          firstname: data.firstname,
+          lastname: data.lastname,
+          nickname: data.nickname,
+          username: data.username,
+          email: data.email,
+          password:data.password
         }
-      })
+      )
       .$promise
       .then(function(response){
         console.log(response);
       }).catch(function(error){
         console.log(error);
+        $state.go('homeRoute');
       });
     };
 
