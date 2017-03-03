@@ -17,7 +17,6 @@
       });
 
     vm.submitUserForm = function(data){
-      console.log(data.id);
       User.prototype$updateAttributes(
         {
           id:data.id,
@@ -32,9 +31,10 @@
       .$promise
       .then(function(response){
         console.log(response);
+        Materialize.toast("Your profile has been updated.", 4000);
       }).catch(function(error){
         console.log(error);
-        $state.go('homeRoute');
+        Materialize.toast("There was an error updating your profile. Please try again.", 4000);
       });
     };
 
