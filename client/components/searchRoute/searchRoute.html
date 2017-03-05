@@ -13,5 +13,5 @@
 </div>
 
 <div class="row small-card-container">
-  <study study="study" ng-repeat="study in $ctrl.studies | filter:searchText"></study>
+  <study study="study" ng-repeat="study in $ctrl.studies | filter:searchText" handle-study-click="$ctrl.clickedStudy(studyid)" ></study>
 </div>

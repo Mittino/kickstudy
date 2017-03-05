@@ -20,10 +20,10 @@
     <div class="col m6">
       <p class="small-heading">Researcher: {{$ctrl.study[0].researcher.firstname}} {{$ctrl.study[0].researcher.lastname}}</p>
       <p class="small-heading"> Nickname: {{$ctrl.study[0].researcher.nickname}}</p>
-      <p class="small-heading"> Bio: {{$ctrl.study[0].researcher.bio}}</p>
-      <p class="small-heading">Photo:</p>
+      <p ng-if="$ctrl.study[0].researcher.bio" class="small-heading"> Bio: {{$ctrl.study[0].researcher.bio}}</p>
+      <p ng-if="$ctrl.study[0].photo" class="small-heading">Photo:</p>
       <p>{{$ctrl.study[0].photo}}</p>
-      <p class="small-heading">Personal Website: {{$ctrl.study[0].personalsite}}</p>
+      <p ng-if="$ctrl.study[0].personalsite" class="small-heading">Personal Website: {{$ctrl.study[0].personalsite}}</p>
     </div>
 
     </div>

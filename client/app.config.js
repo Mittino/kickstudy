@@ -62,7 +62,7 @@
         parent:'application'
       })
       .state('studyRoute', {
-        url:'/study',
+        url:'/study/:id',
         component:'studyRoute',
         parent:'application'
       });

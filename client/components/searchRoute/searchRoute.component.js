@@ -5,7 +5,7 @@
       templateUrl: 'components/searchRoute/searchRoute.html'
     });
 
-  function searchRouteController(Study){
+  function searchRouteController(Study, $state){
     var vm = this;
     vm.studies = [];
 
@@ -22,7 +22,11 @@
          console.log(err);
          });
        };
-        //console.log(vm.studies);
+
+       vm.clickedStudy = function(studyid){
+         console.log('clicked', studyid);
+         $state.go('studyRoute', {id: studyid});
+       };
 
 
   }
