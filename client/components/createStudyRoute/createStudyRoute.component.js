@@ -5,8 +5,17 @@
       templateUrl: 'components/createStudyRoute/createStudyRoute.html'
     });
 
-  function createStudyRouteController(){
+  function createStudyRouteController(Study){
     var vm = this;
+
+    vm.createStudy = function(data){
+      Study.create(data).$promise
+      .then(function(response){
+        console.log(response);
+      }).catch(function(err){
+        console.log(err);
+      });
+    };
 
 
   }

@@ -1,0 +1,38 @@
+<form ng-submit="$ctrl.submitStudyForm()">
+  <div class="row">
+    <div class="card col s8 offset-s2 login">
+
+      <div class= "row">
+        <div class="input-field col offset-m1 m4 s12">
+          <input id="title" type="text" class="validate" ng-model="$ctrl.studyForm.title" required>
+          <label for="title">Title</label>
+        </div>
+      <div class="input-field col offset-m1 m4 s12">
+        <input id="description" type="text" class="validate" ng-model="$ctrl.studyForm.description" required>
+        <label for="description">Description</label>
+      </div>
+    </div>
+
+    <div class= "row">
+      <div class="input-field col offset-m1 m4 s12">
+        <input id="additionalinfo" type="text" class="validate" ng-model="$ctrl.studyForm.additionalinfo" required>
+        <label for="additionalinfo">Additional Information</label>
+      </div>
+      <div class="input-field col offset-m1 m4 s12">
+        <input id="funding" type="number" class="validate" ng-model="$ctrl.studyForm.fundingneeded" required>
+        <label for="funding">Funding Needed</label>
+      </div>
+    </div>
+
+      <div class="input-field col offset-m1 m4 s12">
+        <input id="photo" type="text" class="validate" ng-model="$ctrl.studyForm.photo">
+        <label for="photo">Photo</label>
+      </div>
+      <div class="center">
+        <button class="waves-effect waves-light btn center" type="submit">Submit</button>
+      </div>
+    </div>
+
+
+  </div>
+</form>

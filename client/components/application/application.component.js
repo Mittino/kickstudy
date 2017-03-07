@@ -1,5 +1,4 @@
 (function(){
-console.log('application component')
   angular.module("myApp")
     .component("application", {
       controller: applicationController,
