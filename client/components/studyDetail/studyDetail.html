@@ -2,7 +2,6 @@
   <div class="card-content black-text">
     <span class="card-title">{{$ctrl.study[0].title}}</span>
     <div class="row">
-
       <div class="col m6">
         <p class="small-heading">Description:</p>
         <p>{{$ctrl.study[0].description}}</p>
@@ -10,21 +9,37 @@
         <p>{{$ctrl.study[0].additionalinfo}}</p>
       </div>
 
-    <div class="col m6">
-      <p class="small-heading">Funding Needed: </p>
-      <p>{{$ctrl.study[0].fundingneeded | currency}}</p>
+      <div class="col m6">
+        <p class="small-heading">Funding Needed: </p>
+        <p>{{$ctrl.study[0].fundingneeded | currency}}</p>
+      </div>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="col m6">
-      <p class="small-heading">Researcher: {{$ctrl.study[0].researcher.firstname}} {{$ctrl.study[0].researcher.lastname}}</p>
-      <p class="small-heading"> Nickname: {{$ctrl.study[0].researcher.nickname}}</p>
-      <p ng-if="$ctrl.study[0].researcher.bio" class="small-heading"> Bio: {{$ctrl.study[0].researcher.bio}}</p>
-      <p ng-if="$ctrl.study[0].photo" class="small-heading">Photo:</p>
-      <p>{{$ctrl.study[0].photo}}</p>
-      <p ng-if="$ctrl.study[0].personalsite" class="small-heading">Personal Website: {{$ctrl.study[0].personalsite}}</p>
-    </div>
+    <div class="row">
+      <div class="col m6">
+        <p class="small-heading">Researcher: {{$ctrl.study[0].researcher.firstname}} {{$ctrl.study[0].researcher.lastname}}</p>
+        <p class="small-heading"> Nickname: {{$ctrl.study[0].researcher.nickname}}</p>
+        <p ng-if="$ctrl.study[0].researcher.bio" class="small-heading"> Bio: {{$ctrl.study[0].researcher.bio}}</p>
+        <p ng-if="$ctrl.study[0].photo" class="small-heading">Photo:</p>
+        <p>{{$ctrl.study[0].photo}}</p>
+        <p ng-if="$ctrl.study[0].personalsite" class="small-heading">Personal Website: {{$ctrl.study[0].personalsite}}</p>
+      </div>
+
+      <button class="waves-effect waves-light btn center" ng-click="$ctrl.showPaymentForm = !$ctrl.showPaymentForm">Make a Payment</button>
+
+      <!-- <form action="/your-server-side-code" method="POST">
+        <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_b81q4zEFwR8qL4foV3D0amuT"
+          data-amount="999"
+          data-name="Demo Site"
+          data-description="Widget"
+          data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+          data-locale="auto">
+        </script>
+      </form> -->
+
+      <payment-form ng-if="$ctrl.showPaymentForm"></payment-form>
 
     </div>
   </div>

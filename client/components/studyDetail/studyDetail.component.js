@@ -16,6 +16,8 @@
       console.log(vm.study);
     };
 
+
+
   }
 
 })();
