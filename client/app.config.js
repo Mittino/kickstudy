@@ -65,6 +65,11 @@
         url:'/study/:id',
         component:'studyRoute',
         parent:'application'
+      })
+      .state('createStudyRoute', {
+        url:'/createStudy',
+        component:'createStudyRoute',
+        parent:'application'
       });
 
   }

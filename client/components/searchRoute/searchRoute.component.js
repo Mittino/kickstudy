@@ -28,6 +28,9 @@
          $state.go('studyRoute', {id: studyid});
        };
 
+       vm.createNewStudy = function(){
+         $state.go('createStudyRoute');
+       };
 
   }
 
