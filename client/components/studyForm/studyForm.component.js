@@ -12,12 +12,10 @@
     var vm = this;
     vm.id = User.getCurrentId();
 
-    var studyForm = {researcherid: vm.id};
+    vm.studyForm = {researcherid: vm.id};
 
     vm.submitStudyForm = function(){
       vm.createStudy({data:vm.studyForm});
-      console.log(vm.studyForm);
-
     };
 
   }
