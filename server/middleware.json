@@ -46,7 +46,9 @@
         "params": "$!../client"
       },
       {
-        "paths": ["*"],
+        "paths": [
+          "*"
+        ],
         "params": "$!../client/index.html"
       }
     ]

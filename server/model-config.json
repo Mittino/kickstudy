@@ -44,5 +44,9 @@
   "payment": {
     "dataSource": "mongodb",
     "public": true
+  },
+  "comment": {
+    "dataSource": "mongodb",
+    "public": true
   }
 }

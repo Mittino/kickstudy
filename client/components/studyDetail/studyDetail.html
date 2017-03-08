@@ -27,6 +27,25 @@
 
       <button class="waves-effect waves-light btn center" ng-click="$ctrl.showPaymentForm = !$ctrl.showPaymentForm">Make a Payment</button>
 
+      <div>
+        <button class="waves-effect waves-light btn center" ng-click="$ctrl.getComments()"> View Comments </button>
+        <div ng-if="$ctrl.showComments" class="card-title"> Comments </div>
+          <comment comment="comment" ng-repeat="comment in $ctrl.comments track by comment.id"></comment>
+
+          <div ng-if="$ctrl.comments.length === 0"> No Comments to Display</div>
+
+          <form ng-submit="$ctrl.postComment()">
+            <div class="row">
+              <div class="input-field col offset-m4 m4 s12 login">
+                <input id="newcomment" type="text" class="validate" ng-model="$ctrl.newComment.text">
+                <label for="newcomment">Add Comment</label>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
       <!-- <form action="/your-server-side-code" method="POST">
         <script
           src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -46,4 +65,3 @@
 
 
 </div>
-<div>{{$ctrl.study[0]}}</div>
