@@ -38,12 +38,13 @@
       vm.postComment = function(){
         vm.newComment.userid = User.getCurrentId();
         vm.newComment.studyid = this.study[0].id;
-        vm.newComment.date = new Date().getSeconds();
+        vm.newComment.date = moment();
         console.log(vm.newComment);
 
         Comment.create(vm.newComment).$promise
         .then(function(response){
           console.log(response);
+          vm.comments.push(response);
         }).catch(function(err){
           console.log(err);
         });
