@@ -17,14 +17,13 @@
        }).$promise
          .then(function(response){
          vm.studies = response;
-         console.log(vm.studies);
+        //  console.log(vm.studies);
         }).catch(function(err){
          console.log(err);
          });
        };
 
        vm.clickedStudy = function(studyid){
-         console.log('clicked', studyid);
          $state.go('studyRoute', {id: studyid});
        };
 

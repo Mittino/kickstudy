@@ -12,7 +12,6 @@
 
     function paymentController(moment){
       var vm = this;
-      console.log("payment");
 
       vm.$onChanges = function(){
         console.log(vm.payment, "payment");

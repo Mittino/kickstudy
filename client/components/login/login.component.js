@@ -16,7 +16,7 @@
           password: vm.loginForm.password
         }).$promise
         .then(function(response){
-          console.log(response);
+          // console.log(response);
           LoopBackAuth.currentUserData = response;
           $state.go('homeRoute');
         }).catch(function(error){

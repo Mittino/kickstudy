@@ -28,7 +28,7 @@
       // };
       vm.submitUserForm = function(){
         vm.submitUserData({data:vm.userForm});
-      }
+      };
 
    }
 

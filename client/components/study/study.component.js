@@ -13,7 +13,6 @@
     var vm = this;
 
     vm.clickedStudy = function(study){
-      console.log(study.id);
       vm.handleStudyClick({studyid: study.id});
     };
 

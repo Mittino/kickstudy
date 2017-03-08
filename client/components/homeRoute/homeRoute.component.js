@@ -8,7 +8,6 @@
 
   function homeRouteController(Study, User, Payment, LoopBackAuth){
    var vm = this;
-   console.log('homeRouteController');
 
    vm.$onInit = function getFundedStudies(){
      vm.id = User.getCurrentId();
@@ -16,7 +15,7 @@
      User.getCurrent().$promise
       .then(function(response){
         vm.currentUser = response;
-        console.log(response);
+        //console.log(response);
       }).catch(function(err){
         console.log(err);
       });
@@ -46,7 +45,7 @@
       })
       .$promise
       .then(function(response){
-        console.log(response);
+        //console.log(response);
         vm.payments = response;
         var payments = response;
       }).catch(function(error){

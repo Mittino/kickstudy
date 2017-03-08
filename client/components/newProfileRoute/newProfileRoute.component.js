@@ -11,7 +11,7 @@
     vm.submitUserForm = function(data){
       User.create(data).$promise
       .then(function(response){
-        console.log(response);
+        // console.log(response);
         $state.go('login');
       }).catch(function(err){
         console.log(err);

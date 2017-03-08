@@ -14,10 +14,10 @@
 
     vm.$onChanges = function(){
       vm.study = angular.copy(vm.studyInfo);
-      console.log(vm.study);
     };
 
     vm.getComments = function(){
+      vm.showPaymentForm = false;
       vm.showComments = !vm.showComments;
       Comment.find({
         filter: {
@@ -29,7 +29,7 @@
       }).$promise
         .then(function(response){
         vm.comments = response;
-        console.log(vm.comments);
+        // console.log(vm.comments);
        }).catch(function(err){
         console.log(err);
         });
@@ -39,7 +39,6 @@
         vm.newComment.userid = User.getCurrentId();
         vm.newComment.studyid = this.study[0].id;
         vm.newComment.date = moment();
-        console.log(vm.newComment);
 
         Comment.create(vm.newComment).$promise
         .then(function(response){
@@ -50,6 +49,10 @@
         });
       };
 
+      vm.showPymtForm = function(){
+        vm.showComments = false;
+        vm.showPaymentForm = !vm.showPaymentForm;
+      };
 
   }
 
