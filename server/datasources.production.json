@@ -1,0 +1,10 @@
+{
+  "db": {
+    "connector": "mongodb",
+    "host": "ds125060.mlab.com",
+    "port": "25060",
+    "database": "heroku_vhjxh8hn",
+    "username": "kickstudy",
+    "password": "Password5!"
+  }
+}

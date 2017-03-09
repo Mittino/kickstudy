@@ -8,7 +8,7 @@
     "posttest": "npm run lint && nsp check"
   },
   "engines": {
-    "node" : "7.4.0" 
+    "node" : "7.4.x" 
   },
   "dependencies": {
     "compression": "^1.0.3",
