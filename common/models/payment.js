@@ -19,10 +19,23 @@ module.exports = function(Payment) {
     }, function(err, charge) {
       if (charge) {
         console.log(charge);
-        // TODO: Save a payment record in the DB with the token in it (or as a separate related model)
-        cb(null, {
+
+        Payment.create({
           amount: charge.amount,
-          description: charge.description
+          date: new Date(charge.created * 1000),
+          funderid: userId,
+          studyid: studyId
+        }, function(err, payments) {
+          if (payments) {
+            console.log('Created payment:', payments);
+
+            cb(null, {
+              amount: charge.amount,
+              description: charge.description
+            });
+          } else if (err) {
+            console.log(err);
+          }
         });
       } else if (err) {
         console.log(err);
