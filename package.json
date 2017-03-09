@@ -7,6 +7,9 @@
     "start": "node .",
     "posttest": "npm run lint && nsp check"
   },
+  "engines": {
+    "node" : "7.4.0" 
+  },
   "dependencies": {
     "compression": "^1.0.3",
     "cors": "^2.5.2",
