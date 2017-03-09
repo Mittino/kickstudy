@@ -18,12 +18,12 @@
   },
   "validations": [],
   "relations": {
-    "user":{
+    "user": {
       "type": "belongsTo",
       "model": "user",
       "foreignKey": "userid"
     },
-    "study":{
+    "study": {
       "type": "belongsTo",
       "model": "study",
       "foreignKey": "studyid"

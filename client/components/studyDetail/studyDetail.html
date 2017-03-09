@@ -12,6 +12,15 @@
       <div class="col m6">
         <p class="small-heading">Funding Needed: </p>
         <p>{{$ctrl.study[0].fundingneeded | currency}}</p>
+
+        <br>
+
+        <div input-field>
+          <input type="number" ng-model="$ctrl.paymentAmount">
+          <label>Payment Amount ($USD)</label>
+        </div>
+
+        <button class="waves-effect waves-light btn center" ng-click="$ctrl.showPymtForm()">Make a Payment</button>
       </div>
     </div>
 
@@ -25,24 +34,7 @@
         <p ng-if="$ctrl.study[0].personalsite" class="small-heading">Personal Website: {{$ctrl.study[0].personalsite}}</p>
       </div>
 
-      <button class="waves-effect waves-light btn center" ng-click="$ctrl.showPymtForm()">Make a Payment</button>
 
-
-        <button class="waves-effect waves-light btn center" ng-click="$ctrl.getComments()"> View Comments </button>
-        <div ng-if="$ctrl.showComments" class="card-title"> Comments
-          <comment comment="comment" ng-repeat="comment in $ctrl.comments track by comment.id | orderBy: 'date'" delete-comment="$ctrl.deleteComment(data)"></comment>
-
-          <div ng-if="$ctrl.comments.length === 0"> No Comments to Display</div>
-
-          <form ng-submit="$ctrl.postComment()">
-            <div class="row">
-              <div class="input-field col offset-m4 m4 s12 login">
-                <input id="newcomment" type="text" class="validate" ng-model="$ctrl.newComment.text">
-                <label for="newcomment">Add Comment</label>
-              </div>
-            </div>
-          </form>
-        </div>
 
       <!-- <form action="/your-server-side-code" method="POST">
         <script
@@ -56,9 +48,26 @@
         </script>
       </form> -->
 
-      <payment-form ng-if="$ctrl.showPaymentForm"></payment-form>
+      <!-- <payment-form ng-if="$ctrl.showPaymentForm"></payment-form> -->
 
     </div>
+
+    <button class="waves-effect waves-light btn center" ng-click="$ctrl.getComments()"> View Comments </button>
+    <div ng-if="$ctrl.showComments" class="card-title"> Comments
+      <comment comment="comment" ng-repeat="comment in $ctrl.comments track by comment.id | orderBy: 'date'" delete-comment="$ctrl.deleteComment(data)"></comment>
+
+      <div ng-if="$ctrl.comments.length === 0"> No Comments to Display</div>
+
+      <form ng-submit="$ctrl.postComment()">
+        <div class="row">
+          <div class="input-field col offset-m4 m4 s12 login">
+            <input id="newcomment" type="text" class="validate" ng-model="$ctrl.newComment.text">
+            <label for="newcomment">Add Comment</label>
+          </div>
+        </div>
+      </form>
+    </div>
+
   </div>
 
 
