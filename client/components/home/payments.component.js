@@ -12,8 +12,7 @@
 
     function paymentController(){
       var vm = this;
-      console.log("home");
-
+    
       vm.$onChanges = function(){
         console.log(vm.payments, "payments");
       };

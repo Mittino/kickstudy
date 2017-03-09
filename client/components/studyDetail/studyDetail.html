@@ -30,7 +30,7 @@
 
         <button class="waves-effect waves-light btn center" ng-click="$ctrl.getComments()"> View Comments </button>
         <div ng-if="$ctrl.showComments" class="card-title"> Comments
-          <comment comment="comment" ng-repeat="comment in $ctrl.comments track by comment.id | orderBy: 'date'"></comment>
+          <comment comment="comment" ng-repeat="comment in $ctrl.comments track by comment.id | orderBy: 'date'" delete-comment="$ctrl.deleteComment(data)"></comment>
 
           <div ng-if="$ctrl.comments.length === 0"> No Comments to Display</div>
 

@@ -29,6 +29,13 @@
       "foreignKey": "studyid"
     }
   },
-  "acls": [],
+  "acls": [
+    {
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "__get__user"
+    }
+  ],
   "methods": {}
 }
