@@ -1,38 +1,6 @@
-<div> Payment Form </div>
+<div input-field>
+  <input type="number" ng-model="$ctrl.paymentAmount">
+  <label>Payment Amount ($USD)</label>
+</div>
 
-</form>
-
-<form ng-submit="$ctrl.paymentSubmit()">
-  <script
-    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="pk_test_b81q4zEFwR8qL4foV3D0amuT"
-    data-amount="999"
-    data-name="Demo Site"
-    data-description="Widget"
-    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-    data-locale="auto">
-  </script>
-
-  <div class="row">
-    <div class="card col s8 offset-s2 login">
-      <div class= "row">
-        <div class="input-field col offset-m4 m4 s12 login">
-          <input id="email" type="text" class="validate" data-stripe="amount" ng-model="$ctrl.paymentForm.amount">
-          <label>Amount</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="input-field col offset-m4 m4 s12 login">
-          <input id="expMonth" type="password" class="validate" data-stripe="exp-month">
-          <label>ExpMonth</label>
-        </div>
-      </div>
-
-      <div class="center">
-        <button class="waves-effect waves-light btn center" type="submit">Submit</button>
-      </div>
-
-    </div>
-  </div>
-</form>
+<button class="waves-effect waves-light btn center" ng-click="$ctrl.showPymtForm()">Make a Payment</button>
