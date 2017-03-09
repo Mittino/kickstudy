@@ -19,6 +19,8 @@
       token: function(token) {
         console.log(token);
 
+        vm.pendingPayment = true;
+
         Payment.makePayment({
           amount: vm.paymentAmount,
           tokenId: token.id,
@@ -27,6 +29,9 @@
         })
           .$promise
           .then(function(response) {
+            vm.pendingPayment = false;
+            vm.paymentSuccess = true;
+            vm.payment = response.response;
             console.log(response);
           })
           .catch(function(error) {

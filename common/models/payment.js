@@ -11,25 +11,24 @@ module.exports = function(Payment) {
     // console.log(userId);
 
     // Charge the user's card:
-    var charge = stripe.charges.create({
+    stripe.charges.create({
       amount: amount,
       currency: "usd",
       description: "Kickstudy payment for Study",
       source: tokenId,
     }, function(err, charge) {
-      // asynchronously called
-      if (err) { console.log(err); }
-
-      console.log(charge);
+      if (charge) {
+        console.log(charge);
+        // TODO: Save a payment record in the DB with the token in it (or as a separate related model)
+        cb(null, {
+          amount: charge.amount,
+          description: charge.description
+        });
+      } else if (err) {
+        console.log(err);
+      }
     });
-
-
-// TODO: Save a payment record in the DB with the token in it (or as a separate related model)
-
-    cb(null, {
-      foo: 'bar'
-    });
-  }
+  };
 
   Payment.remoteMethod('makePayment', {
     accepts: [
