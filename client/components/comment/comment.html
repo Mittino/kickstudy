@@ -5,7 +5,7 @@
     <p class="small-heading">Posted By: {{$ctrl.comment.user.nickname}}</p>
     <p class="small-heading">Posted On: {{$ctrl.comment.date | date:"MM/dd/yyyy 'at' h:mma"}}</p>
     <div ng-if="$ctrl.isOwner">
-      <button class="waves-effect waves-light btn center" ng-click="$ctrl.edit()">Edit</button>
+      <!-- <button class="waves-effect waves-light btn center" ng-click="$ctrl.edit()">Edit</button> -->
       <button class="waves-effect waves-light btn center" ng-click="$ctrl.delete()">Delete</button>
     </div>
 
