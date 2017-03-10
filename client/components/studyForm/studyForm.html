@@ -24,14 +24,21 @@
       </div>
     </div>
 
+    <div id="direct_upload"
+        ngf-drop="$ctrl.uploadFiles(files)"
+        ngf-drag-over-class="dragOverClass($event)"
+        ng-model="files"
+        ng-multiple="true">
       <div class="input-field col offset-m1 m4 s12">
         <input id="photo" type="text" class="validate" ng-model="$ctrl.studyForm.photo">
         <label for="photo">Photo</label>
       </div>
-      <div class="center">
-        <button class="waves-effect waves-light btn center" type="submit">Submit</button>
-      </div>
     </div>
+
+    <div class="center">
+      <button class="waves-effect waves-light btn center" type="submit">Submit</button>
+    </div>
+  </div>
 
 
   </div>

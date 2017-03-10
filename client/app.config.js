@@ -1,7 +1,8 @@
 (function(){
   angular.module("myApp")
     .config(httpInterceptorConfig)
-    .config(routerConfig);
+    .config(routerConfig)
+    .config(cloudinaryProvider);
 
   function httpInterceptorConfig($httpProvider) {
     $httpProvider.interceptors.push(function($q, $location, LoopBackAuth) {
@@ -19,6 +20,17 @@
       };
     });
   }
+
+  // photoAlbumApp.config(['cloudinaryProvider', function (cloudinaryProvider) {
+  //   cloudinaryProvider
+  //       .set("cloud_name", "CCCCCCC")
+  //       .set("upload_preset", "UUUUUUUU");
+  // }]);
+  function cloudinaryProvider(cloudinaryProvider){
+  cloudinaryProvider
+      .set("cloud_name", "mittino")
+      .set("upload_preset", "nyalnrdr");
+    }
 
   routerConfig.$inject = ['$locationProvider', '$urlRouterProvider', '$stateProvider'];
 
