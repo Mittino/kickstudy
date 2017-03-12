@@ -20,10 +20,7 @@
     };
 
     vm.uploadImage = function(file){
-      //console.log(file);
 
-      // if (!$scope.files) return;
-      // angular.forEach(files, function(file){
         if (file && !file.$error) {
           var upload = Upload.upload({
             url: "https://api.cloudinary.com/v1_1/" + cloudinary.config().cloud_name + "/upload",

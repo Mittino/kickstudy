@@ -12,22 +12,31 @@
 
     vm.newImage = function(data){
       cloudinary = data;
-      console.log(cloudinary);
     };
 
     vm.createStudy = function(data){
+      console.log(data);
 
       Study.create(data).$promise
       .then(function(response){
         console.log(response);
-
+        var newStudy = response;
         //add image to new study
         newImage.studyid = response.id;
         newImage.cloudinary = cloudinary;
-        console.log(newImage);
+
 
         Image.create(newImage).$promise
         .then(function(response){
+          newStudy.imageid = response.id;
+
+          Study.prototype$updateAttributes(newStudy).$promise
+          .then(function(response){
+            console.log(response);
+          }).catch(function(err){
+            console.log(err);
+          });
+
           console.log(response);
         }).catch(function(err){
           console.log(err);
@@ -39,13 +48,6 @@
       });
     };
 
-
-    // Study.images.create(data).$promise
-    // .then(function(response){
-    //   console.log("created image in db", response);
-    // }).catch(function(err){
-    //   console.log("error saving image to db", err);
-    // });
   }
 
 })();
