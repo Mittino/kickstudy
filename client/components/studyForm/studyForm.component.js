@@ -15,6 +15,12 @@
 
     vm.studyForm = {researcherid: vm.id};
 
+    // TODO: Temporary for testing
+    vm.studyForm.title = 'Test Title';
+    vm.studyForm.description = 'Test Description';
+    vm.studyForm.additionalinfo = 'Test Additional Info';
+    vm.studyForm.fundingneeded = 30000;
+
     vm.submitStudyForm = function(){
       vm.createStudy({data:vm.studyForm});
     };

@@ -40,10 +40,10 @@
       "model": "comment",
       "foreignKey": "commentid"
     },
-    "images":{
-      "type":"hasOne",
+    "image":{
+      "type":"embedsOne",
       "model": "image",
-      "property": "imageid"
+      "property": "image"
     }
   },
   "acls": [
@@ -54,15 +54,9 @@
     },
     {
       "principalType": "ROLE",
-      "principalId": "admin",
-      "permission": "ALLOW",
-      "property": "myMethod"
-    },
-    {
-      "principalType": "ROLE",
       "principalId": "$authenticated",
       "permission": "ALLOW",
-      "property": "myMethod"
+      "property": "__get__image"
     }
   ],
   "methods": {}

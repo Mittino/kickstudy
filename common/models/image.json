@@ -14,12 +14,15 @@
   },
   "validations": [],
   "relations": {
-    "images":{
-      "type":"belongsTo",
-      "model": "study",
-      "property": "studyid"
-    }
+
   },
-  "acls": [],
+  "acls": [
+    {
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "__get__image"
+    }
+  ],
   "methods": {}
 }

@@ -2825,27 +2825,27 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               method: "PUT",
             },
 
-            // INTERNAL. Use Study.images() instead.
-            "prototype$__get__images": {
-              url: urlBase + "/studies/:id/images",
+            // INTERNAL. Use Study.image() instead.
+            "prototype$__get__image": {
+              url: urlBase + "/studies/:id/image",
               method: "GET",
             },
 
-            // INTERNAL. Use Study.images.create() instead.
-            "prototype$__create__images": {
-              url: urlBase + "/studies/:id/images",
+            // INTERNAL. Use Study.image.create() instead.
+            "prototype$__create__image": {
+              url: urlBase + "/studies/:id/image",
               method: "POST",
             },
 
-            // INTERNAL. Use Study.images.update() instead.
-            "prototype$__update__images": {
-              url: urlBase + "/studies/:id/images",
+            // INTERNAL. Use Study.image.update() instead.
+            "prototype$__update__image": {
+              url: urlBase + "/studies/:id/image",
               method: "PUT",
             },
 
-            // INTERNAL. Use Study.images.destroy() instead.
-            "prototype$__destroy__images": {
-              url: urlBase + "/studies/:id/images",
+            // INTERNAL. Use Study.image.destroy() instead.
+            "prototype$__destroy__image": {
+              url: urlBase + "/studies/:id/image",
               method: "DELETE",
             },
 
@@ -3524,12 +3524,6 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
             // INTERNAL. Use Comment.study() instead.
             "::get::Comment::study": {
               url: urlBase + "/comments/:id/study",
-              method: "GET",
-            },
-
-            // INTERNAL. Use Image.images() instead.
-            "::get::Image::images": {
-              url: urlBase + "/images/:id/images",
               method: "GET",
             },
           }
@@ -4493,27 +4487,27 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
         };
     /**
      * @ngdoc object
-     * @name lbServices.Study.images
-     * @header lbServices.Study.images
+     * @name lbServices.Study.image
+     * @header lbServices.Study.image
      * @object
      * @description
      *
-     * The object `Study.images` groups methods
+     * The object `Study.image` groups methods
      * manipulating `Image` instances related to `Study`.
      *
-     * Call {@link lbServices.Study#images Study.images()}
+     * Call {@link lbServices.Study#image Study.image()}
      * to query all related instances.
      */
 
 
             /**
              * @ngdoc method
-             * @name lbServices.Study#images
+             * @name lbServices.Study#image
              * @methodOf lbServices.Study
              *
              * @description
              *
-             * Fetches hasOne relation images.
+             * Fetches hasOne relation image.
              *
              * @param {Object=} parameters Request parameters.
              *
@@ -4540,20 +4534,20 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This usually means the response is a `Image` object.)
              * </em>
              */
-        R.images = function() {
+        R.image = function() {
           var TargetResource = $injector.get("Image");
-          var action = TargetResource["::get::Study::images"];
+          var action = TargetResource["::get::Study::image"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Study.images#create
-             * @methodOf lbServices.Study.images
+             * @name lbServices.Study.image#create
+             * @methodOf lbServices.Study.image
              *
              * @description
              *
-             * Creates a new instance in images of this model.
+             * Creates a new instance in image of this model.
              *
              * @param {Object=} parameters Request parameters.
              *
@@ -4582,20 +4576,20 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This usually means the response is a `Image` object.)
              * </em>
              */
-        R.images.create = function() {
+        R.image.create = function() {
           var TargetResource = $injector.get("Image");
-          var action = TargetResource["::create::Study::images"];
+          var action = TargetResource["::create::Study::image"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Study.images#createMany
-             * @methodOf lbServices.Study.images
+             * @name lbServices.Study.image#createMany
+             * @methodOf lbServices.Study.image
              *
              * @description
              *
-             * Creates a new instance in images of this model.
+             * Creates a new instance in image of this model.
              *
              * @param {Object=} parameters Request parameters.
              *
@@ -4624,20 +4618,20 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This usually means the response is a `Image` object.)
              * </em>
              */
-        R.images.createMany = function() {
+        R.image.createMany = function() {
           var TargetResource = $injector.get("Image");
-          var action = TargetResource["::createMany::Study::images"];
+          var action = TargetResource["::createMany::Study::image"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Study.images#destroy
-             * @methodOf lbServices.Study.images
+             * @name lbServices.Study.image#destroy
+             * @methodOf lbServices.Study.image
              *
              * @description
              *
-             * Deletes images of this model.
+             * Deletes image of this model.
              *
              * @param {Object=} parameters Request parameters.
              *
@@ -4659,20 +4653,20 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * This method returns no data.
              */
-        R.images.destroy = function() {
+        R.image.destroy = function() {
           var TargetResource = $injector.get("Image");
-          var action = TargetResource["::destroy::Study::images"];
+          var action = TargetResource["::destroy::Study::image"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Study.images#update
-             * @methodOf lbServices.Study.images
+             * @name lbServices.Study.image#update
+             * @methodOf lbServices.Study.image
              *
              * @description
              *
-             * Update images of this model.
+             * Update image of this model.
              *
              * @param {Object=} parameters Request parameters.
              *
@@ -4701,9 +4695,9 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This usually means the response is a `Image` object.)
              * </em>
              */
-        R.images.update = function() {
+        R.image.update = function() {
           var TargetResource = $injector.get("Image");
-          var action = TargetResource["::update::Study::images"];
+          var action = TargetResource["::update::Study::image"];
           return action.apply(R, arguments);
         };
 
@@ -6904,12 +6898,6 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
           { 'id': '@id' },
           {
 
-            // INTERNAL. Use Image.images() instead.
-            "prototype$__get__images": {
-              url: urlBase + "/images/:id/images",
-              method: "GET",
-            },
-
             /**
              * @ngdoc method
              * @name lbServices.Image#create
@@ -7467,34 +7455,34 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               method: "POST",
             },
 
-            // INTERNAL. Use Study.images() instead.
-            "::get::Study::images": {
-              url: urlBase + "/studies/:id/images",
+            // INTERNAL. Use Study.image() instead.
+            "::get::Study::image": {
+              url: urlBase + "/studies/:id/image",
               method: "GET",
             },
 
-            // INTERNAL. Use Study.images.create() instead.
-            "::create::Study::images": {
-              url: urlBase + "/studies/:id/images",
+            // INTERNAL. Use Study.image.create() instead.
+            "::create::Study::image": {
+              url: urlBase + "/studies/:id/image",
               method: "POST",
             },
 
-            // INTERNAL. Use Study.images.createMany() instead.
-            "::createMany::Study::images": {
+            // INTERNAL. Use Study.image.createMany() instead.
+            "::createMany::Study::image": {
               isArray: true,
-              url: urlBase + "/studies/:id/images",
+              url: urlBase + "/studies/:id/image",
               method: "POST",
             },
 
-            // INTERNAL. Use Study.images.update() instead.
-            "::update::Study::images": {
-              url: urlBase + "/studies/:id/images",
+            // INTERNAL. Use Study.image.update() instead.
+            "::update::Study::image": {
+              url: urlBase + "/studies/:id/image",
               method: "PUT",
             },
 
-            // INTERNAL. Use Study.images.destroy() instead.
-            "::destroy::Study::images": {
-              url: urlBase + "/studies/:id/images",
+            // INTERNAL. Use Study.image.destroy() instead.
+            "::destroy::Study::image": {
+              url: urlBase + "/studies/:id/image",
               method: "DELETE",
             },
           }
@@ -7746,46 +7734,6 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
         */
         R.modelName = "Image";
 
-
-            /**
-             * @ngdoc method
-             * @name lbServices.Image#images
-             * @methodOf lbServices.Image
-             *
-             * @description
-             *
-             * Fetches belongsTo relation images.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - image id
-             *
-             *  - `options` – `{object=}` -
-             *
-             *  - `refresh` – `{boolean=}` -
-             *
-             *  - `options` – `{object=}` -
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `Study` object.)
-             * </em>
-             */
-        R.images = function() {
-          var TargetResource = $injector.get("Study");
-          var action = TargetResource["::get::Image::images"];
-          return action.apply(R, arguments);
-        };
 
 
         return R;
