@@ -48,5 +48,9 @@
   "comment": {
     "dataSource": "mongodb",
     "public": true
+  },
+  "image": {
+    "dataSource": "mongodb",
+    "public": true
   }
 }

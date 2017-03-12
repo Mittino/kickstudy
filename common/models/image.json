@@ -1,0 +1,25 @@
+{
+  "name": "image",
+  "plural": "images",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "cloudinary": {
+      "type": "object",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "images":{
+      "type":"belongsTo",
+      "model": "study",
+      "property": "studyid"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

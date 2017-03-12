@@ -25,14 +25,23 @@
     </div>
 
     <div id="direct_upload"
-        ngf-drop="$ctrl.uploadFiles(files)"
-        ngf-drag-over-class="dragOverClass($event)"
+        ngf-drop="$ctrl.uploadImage(files)"
+      
         ng-model="files"
         ng-multiple="true">
-      <div class="input-field col offset-m1 m4 s12">
+
+      <!-- If there is no image uploaded -->
+      <div class="input-field col offset-m1 m4 s12" ng-if="!$ctrl.image">
         <input id="photo" type="text" class="validate" ng-model="$ctrl.studyForm.photo">
         <label for="photo">Photo</label>
       </div>
+    </div>
+
+    <!-- If there is an image -->
+    <div class="input-field col offset-m1 m4 s12" ng-if="$ctrl.image">
+      <cl-image public-id="{{$ctrl.image.public_id}}">
+        <cl-transformation height="150" width="150" crop="fill"/>
+      </cl-image>
     </div>
 
     <div class="center">

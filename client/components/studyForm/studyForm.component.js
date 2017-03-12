@@ -4,11 +4,12 @@
       controller: studyFormController,
       templateUrl: 'components/studyForm/studyForm.html',
       bindings: {
-        createStudy: '&'
+        createStudy: '&',
+        newImage: '&'
       }
     });
 
-  function studyFormController(User, cloudinary, Upload){
+  function studyFormController(User, cloudinary, Upload, Study){
     var vm = this;
     vm.id = User.getCurrentId();
 
@@ -18,8 +19,8 @@
       vm.createStudy({data:vm.studyForm});
     };
 
-    vm.uploadFiles = function(file){
-      console.log(file);
+    vm.uploadImage = function(file){
+      //console.log(file);
 
       // if (!$scope.files) return;
       // angular.forEach(files, function(file){
@@ -36,11 +37,9 @@
             file.progress = Math.round((e.loaded * 100.0) / e.total);
             file.status = "Uploading... " + file.progress + "%";
           }).success(function (data, status, headers, config) {
-            // $rootScope.photos = $rootScope.photos || [];
-            // data.context = {custom: {photo: $scope.title}};
-            // file.result = data;
-            // $rootScope.photos.push(data);
-            console.log(data, status, headers, config);
+            vm.image = data;
+            vm.newImage({data:vm.image});
+            //console.log(data);
           }).error(function (data, status, headers, config) {
             file.result = data;
           });
