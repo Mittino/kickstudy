@@ -28,7 +28,7 @@
         .then(function(study) {
           console.log(study);
 
-          Study.image.create({ id: study.id }, newImage, function (err, image){
+          Study.headerImage.create({ id: study.id }, newImage, function (err, image){
             console.log(image);
             console.log(study);
           });

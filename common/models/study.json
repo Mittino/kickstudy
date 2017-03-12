@@ -40,10 +40,10 @@
       "model": "comment",
       "foreignKey": "commentid"
     },
-    "image":{
-      "type":"embedsOne",
+    "headerImage": {
+      "type": "hasOne",
       "model": "image",
-      "property": "image"
+      "polymorphic": "imageable"
     }
   },
   "acls": [

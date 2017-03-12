@@ -2825,27 +2825,27 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               method: "PUT",
             },
 
-            // INTERNAL. Use Study.image() instead.
-            "prototype$__get__image": {
-              url: urlBase + "/studies/:id/image",
+            // INTERNAL. Use Study.headerImage() instead.
+            "prototype$__get__headerImage": {
+              url: urlBase + "/studies/:id/headerImage",
               method: "GET",
             },
 
-            // INTERNAL. Use Study.image.create() instead.
-            "prototype$__create__image": {
-              url: urlBase + "/studies/:id/image",
+            // INTERNAL. Use Study.headerImage.create() instead.
+            "prototype$__create__headerImage": {
+              url: urlBase + "/studies/:id/headerImage",
               method: "POST",
             },
 
-            // INTERNAL. Use Study.image.update() instead.
-            "prototype$__update__image": {
-              url: urlBase + "/studies/:id/image",
+            // INTERNAL. Use Study.headerImage.update() instead.
+            "prototype$__update__headerImage": {
+              url: urlBase + "/studies/:id/headerImage",
               method: "PUT",
             },
 
-            // INTERNAL. Use Study.image.destroy() instead.
-            "prototype$__destroy__image": {
-              url: urlBase + "/studies/:id/image",
+            // INTERNAL. Use Study.headerImage.destroy() instead.
+            "prototype$__destroy__headerImage": {
+              url: urlBase + "/studies/:id/headerImage",
               method: "DELETE",
             },
 
@@ -4487,27 +4487,27 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
         };
     /**
      * @ngdoc object
-     * @name lbServices.Study.image
-     * @header lbServices.Study.image
+     * @name lbServices.Study.headerImage
+     * @header lbServices.Study.headerImage
      * @object
      * @description
      *
-     * The object `Study.image` groups methods
+     * The object `Study.headerImage` groups methods
      * manipulating `Image` instances related to `Study`.
      *
-     * Call {@link lbServices.Study#image Study.image()}
+     * Call {@link lbServices.Study#headerImage Study.headerImage()}
      * to query all related instances.
      */
 
 
             /**
              * @ngdoc method
-             * @name lbServices.Study#image
+             * @name lbServices.Study#headerImage
              * @methodOf lbServices.Study
              *
              * @description
              *
-             * Fetches hasOne relation image.
+             * Fetches hasOne relation headerImage.
              *
              * @param {Object=} parameters Request parameters.
              *
@@ -4534,20 +4534,20 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This usually means the response is a `Image` object.)
              * </em>
              */
-        R.image = function() {
+        R.headerImage = function() {
           var TargetResource = $injector.get("Image");
-          var action = TargetResource["::get::Study::image"];
+          var action = TargetResource["::get::Study::headerImage"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Study.image#create
-             * @methodOf lbServices.Study.image
+             * @name lbServices.Study.headerImage#create
+             * @methodOf lbServices.Study.headerImage
              *
              * @description
              *
-             * Creates a new instance in image of this model.
+             * Creates a new instance in headerImage of this model.
              *
              * @param {Object=} parameters Request parameters.
              *
@@ -4576,20 +4576,20 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This usually means the response is a `Image` object.)
              * </em>
              */
-        R.image.create = function() {
+        R.headerImage.create = function() {
           var TargetResource = $injector.get("Image");
-          var action = TargetResource["::create::Study::image"];
+          var action = TargetResource["::create::Study::headerImage"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Study.image#createMany
-             * @methodOf lbServices.Study.image
+             * @name lbServices.Study.headerImage#createMany
+             * @methodOf lbServices.Study.headerImage
              *
              * @description
              *
-             * Creates a new instance in image of this model.
+             * Creates a new instance in headerImage of this model.
              *
              * @param {Object=} parameters Request parameters.
              *
@@ -4618,20 +4618,20 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This usually means the response is a `Image` object.)
              * </em>
              */
-        R.image.createMany = function() {
+        R.headerImage.createMany = function() {
           var TargetResource = $injector.get("Image");
-          var action = TargetResource["::createMany::Study::image"];
+          var action = TargetResource["::createMany::Study::headerImage"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Study.image#destroy
-             * @methodOf lbServices.Study.image
+             * @name lbServices.Study.headerImage#destroy
+             * @methodOf lbServices.Study.headerImage
              *
              * @description
              *
-             * Deletes image of this model.
+             * Deletes headerImage of this model.
              *
              * @param {Object=} parameters Request parameters.
              *
@@ -4653,20 +4653,20 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * This method returns no data.
              */
-        R.image.destroy = function() {
+        R.headerImage.destroy = function() {
           var TargetResource = $injector.get("Image");
-          var action = TargetResource["::destroy::Study::image"];
+          var action = TargetResource["::destroy::Study::headerImage"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Study.image#update
-             * @methodOf lbServices.Study.image
+             * @name lbServices.Study.headerImage#update
+             * @methodOf lbServices.Study.headerImage
              *
              * @description
              *
-             * Update image of this model.
+             * Update headerImage of this model.
              *
              * @param {Object=} parameters Request parameters.
              *
@@ -4695,9 +4695,9 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This usually means the response is a `Image` object.)
              * </em>
              */
-        R.image.update = function() {
+        R.headerImage.update = function() {
           var TargetResource = $injector.get("Image");
-          var action = TargetResource["::update::Study::image"];
+          var action = TargetResource["::update::Study::headerImage"];
           return action.apply(R, arguments);
         };
 
@@ -7455,34 +7455,34 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               method: "POST",
             },
 
-            // INTERNAL. Use Study.image() instead.
-            "::get::Study::image": {
-              url: urlBase + "/studies/:id/image",
+            // INTERNAL. Use Study.headerImage() instead.
+            "::get::Study::headerImage": {
+              url: urlBase + "/studies/:id/headerImage",
               method: "GET",
             },
 
-            // INTERNAL. Use Study.image.create() instead.
-            "::create::Study::image": {
-              url: urlBase + "/studies/:id/image",
+            // INTERNAL. Use Study.headerImage.create() instead.
+            "::create::Study::headerImage": {
+              url: urlBase + "/studies/:id/headerImage",
               method: "POST",
             },
 
-            // INTERNAL. Use Study.image.createMany() instead.
-            "::createMany::Study::image": {
+            // INTERNAL. Use Study.headerImage.createMany() instead.
+            "::createMany::Study::headerImage": {
               isArray: true,
-              url: urlBase + "/studies/:id/image",
+              url: urlBase + "/studies/:id/headerImage",
               method: "POST",
             },
 
-            // INTERNAL. Use Study.image.update() instead.
-            "::update::Study::image": {
-              url: urlBase + "/studies/:id/image",
+            // INTERNAL. Use Study.headerImage.update() instead.
+            "::update::Study::headerImage": {
+              url: urlBase + "/studies/:id/headerImage",
               method: "PUT",
             },
 
-            // INTERNAL. Use Study.image.destroy() instead.
-            "::destroy::Study::image": {
-              url: urlBase + "/studies/:id/image",
+            // INTERNAL. Use Study.headerImage.destroy() instead.
+            "::destroy::Study::headerImage": {
+              url: urlBase + "/studies/:id/headerImage",
               method: "DELETE",
             },
           }
