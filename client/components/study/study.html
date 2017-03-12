@@ -1,8 +1,14 @@
 
   <div class="card" ng-click="$ctrl.clickedStudy($ctrl.study)">
+    <div class="card-image">
+      <cl-image public-id="{{$ctrl.study.headerImage.cloudinary.public_id}}">
+        <!-- <cl-transformation height="150" width="150" crop="fill"/> -->
+      </cl-image>
+
+    </div>
     <div class="card-content black-text">
       <span class="card-title">{{$ctrl.study.title}}</span>
-      <p class="small-heading">{{$ctrl.study.description}}</p>
+      <p class="small-heading">Description: {{$ctrl.study.description}}</p>
       <p class="small-heading">Funding Needed: {{$ctrl.study.fundingneeded | currency}}</p>
       <p class="small-heading">Researcher: {{$ctrl.study.researcher.firstname}} {{$ctrl.study.researcher.lastname}}</p>
     </div>

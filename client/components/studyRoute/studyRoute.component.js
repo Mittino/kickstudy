@@ -14,7 +14,7 @@
           where:{
             id: $stateParams.id
           },
-         include: 'researcher'
+         include: ['researcher', 'headerImage']
         }
       }).$promise
         .then(function(response){

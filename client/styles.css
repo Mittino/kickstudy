@@ -65,6 +65,20 @@ ul.circle {
   color: #D64933;
 }
 
+.card .study-detail-title{
+  font-size: 40px;
+  color: #424242;
+}
+
+.study-detail-funding{
+  font-size: 25px;
+  color: #424242;
+}
+.study-detail-heading{
+  font-size: 16px;
+  color: #424242;
+}
+
 .small-heading{
   font-family: 'Hind Vadodara', sans-serif;
   font-size: 15px;
@@ -94,7 +108,7 @@ ul.circle {
   margin: 15px;
 }
 
-.login {
+.login{
   margin: 40px 0 15px 0;
   padding: 40px 0 40px 0;
 }

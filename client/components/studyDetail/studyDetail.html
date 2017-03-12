@@ -1,69 +1,64 @@
 <div class="card small-card-size">
   <div class="card-content black-text">
-    <span class="card-title">{{$ctrl.study[0].title}}</span>
-    <div class="row">
-      <div class="col m6">
-        <p class="small-heading">Description:</p>
-        <p>{{$ctrl.study[0].description}}</p>
-        <p class="small-heading">Additional Information:</p>
-        <p>{{$ctrl.study[0].additionalinfo}}</p>
-      </div>
-
-      <div class="col m6">
-        <p class="small-heading">Funding Needed: </p>
-        <p>{{$ctrl.study[0].fundingneeded | currency}}</p>
-
-        <br>
-
-        <payment-form></payment-form>
-      </div>
-    </div>
 
     <div class="row">
-      <div class="col m6">
-        <p class="small-heading">Researcher: {{$ctrl.study[0].researcher.firstname}} {{$ctrl.study[0].researcher.lastname}}</p>
+      <div class="col m8 center">
+        <span class=" center study-detail-title">{{$ctrl.study[0].title}}</span>
+      </div>
+      <div class="col m4">
+        <p class="small-heading">By Researcher: {{$ctrl.study[0].researcher.firstname}} {{$ctrl.study[0].researcher.lastname}}</p>
         <p class="small-heading"> Nickname: {{$ctrl.study[0].researcher.nickname}}</p>
         <p ng-if="$ctrl.study[0].researcher.bio" class="small-heading"> Bio: {{$ctrl.study[0].researcher.bio}}</p>
         <p ng-if="$ctrl.study[0].photo" class="small-heading">Photo:</p>
         <p>{{$ctrl.study[0].photo}}</p>
         <p ng-if="$ctrl.study[0].personalsite" class="small-heading">Personal Website: {{$ctrl.study[0].personalsite}}</p>
       </div>
-
-
-
-      <!-- <form action="/your-server-side-code" method="POST">
-        <script
-          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="pk_test_b81q4zEFwR8qL4foV3D0amuT"
-          data-amount="999"
-          data-name="Demo Site"
-          data-description="Widget"
-          data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-          data-locale="auto">
-        </script>
-      </form> -->
-
-      <!-- <payment-form ng-if="$ctrl.showPaymentForm"></payment-form> -->
-
     </div>
 
-    <button class="waves-effect waves-light btn center" ng-click="$ctrl.getComments()"> View Comments </button>
-    <div ng-if="$ctrl.showComments" class="card-title"> Comments
-      <comment comment="comment" ng-repeat="comment in $ctrl.comments track by comment.id | orderBy: 'date'" delete-comment="$ctrl.deleteComment(data)"></comment>
-
-      <div ng-if="$ctrl.comments.length === 0"> No Comments to Display</div>
-
-      <form ng-submit="$ctrl.postComment()">
-        <div class="row">
-          <div class="input-field col offset-m4 m4 s12 login">
-            <input id="newcomment" type="text" class="validate" ng-model="$ctrl.newComment.text">
-            <label for="newcomment">Add Comment</label>
-          </div>
+    <div class="row">
+      <div class="col m8 center">
+        <cl-image public-id="{{$ctrl.study[0].headerImage.cloudinary.public_id}}">
+          <cl-transformation height="350" width="550" crop="fill"/>
+        </cl-image>
+      </div>
+      <div class="col m4">
+        <p class="study-detail-funding">Funding Needed: {{$ctrl.study[0].fundingneeded | currency}}</p>
+        <div class="center">
+          <payment-form></payment-form>
         </div>
-      </form>
+      </div>
     </div>
 
+    <div class="row">
+      <div class="col m8">
+        <p class="study-detail-heading">Description: {{$ctrl.study[0].description}}</p>
+        <p class="study-detail-heading">Additional Information: {{$ctrl.study[0].additionalinfo}}</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col m8">
+        <div class = "center">
+          <button class="waves-effect waves-light btn center" ng-click="$ctrl.getComments()"> View Comments </button>
+        </div>
+        <!-- show comment form -->
+        <div ng-if="$ctrl.showComments" class="card-title"> Comments
+
+        <comment comment="comment" ng-repeat="comment in $ctrl.comments track by comment.id | orderBy: 'date'" delete-comment="$ctrl.deleteComment(data)"></comment>
+
+          <div ng-if="$ctrl.comments.length === 0"> No Comments to Display</div>
+
+          <form ng-submit="$ctrl.postComment()">
+            <div class="row">
+              <div class="input-field">
+                <input id="newcomment" type="text" class="validate" ng-model="$ctrl.newComment.text">
+                <label for="newcomment">Add Comment</label>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
   </div>
-
-
 </div>

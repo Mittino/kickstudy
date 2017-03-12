@@ -10,6 +10,7 @@
 
   function studyDetailController(Comment, User, LoopBackAuth){
     var vm = this;
+    console.log(vm);
 
     vm.$onChanges = function(){
       vm.study = angular.copy(vm.studyInfo);
