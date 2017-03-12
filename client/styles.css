@@ -117,6 +117,20 @@ ul.circle {
   padding: 15px 15px 15px 15px;
 }
 
+.study-card-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: space-around;;
+}
+
+.study-card{
+  width: 250px;
+  height: 400px;
+  margin: 10px 10px 10px 10px;
+}
+
 .btn{
   background-color:#D64933;
   margin-bottom: 15px;

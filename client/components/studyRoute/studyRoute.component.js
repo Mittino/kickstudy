@@ -9,12 +9,12 @@
     var vm = this;
 
     vm.$onInit = function getStudies(){
-      Study.find({
+      Study.findOne({
         filter: {
           where:{
             id: $stateParams.id
           },
-         include: ['researcher', 'headerImage']
+         include: ['researcher', 'headerImage', 'comments']
         }
       }).$promise
         .then(function(response){

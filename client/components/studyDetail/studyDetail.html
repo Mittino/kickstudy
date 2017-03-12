@@ -3,26 +3,26 @@
 
     <div class="row">
       <div class="col m8 center">
-        <span class=" center study-detail-title">{{$ctrl.study[0].title}}</span>
+        <span class=" center study-detail-title">{{$ctrl.study.title}}</span>
       </div>
       <div class="col m4">
-        <p class="small-heading">By Researcher: {{$ctrl.study[0].researcher.firstname}} {{$ctrl.study[0].researcher.lastname}}</p>
-        <p class="small-heading"> Nickname: {{$ctrl.study[0].researcher.nickname}}</p>
-        <p ng-if="$ctrl.study[0].researcher.bio" class="small-heading"> Bio: {{$ctrl.study[0].researcher.bio}}</p>
-        <p ng-if="$ctrl.study[0].photo" class="small-heading">Photo:</p>
-        <p>{{$ctrl.study[0].photo}}</p>
-        <p ng-if="$ctrl.study[0].personalsite" class="small-heading">Personal Website: {{$ctrl.study[0].personalsite}}</p>
+        <p class="small-heading">By Researcher: {{$ctrl.study.researcher.firstname}} {{$ctrl.study.researcher.lastname}}</p>
+        <p class="small-heading"> Nickname: {{$ctrl.study.researcher.nickname}}</p>
+        <p ng-if="$ctrl.study.researcher.bio" class="small-heading"> Bio: {{$ctrl.study.researcher.bio}}</p>
+        <p ng-if="$ctrl.study.photo" class="small-heading">Photo:</p>
+        <p>{{$ctrl.study.photo}}</p>
+        <p ng-if="$ctrl.study.personalsite" class="small-heading">Personal Website: {{$ctrl.study.personalsite}}</p>
       </div>
     </div>
 
     <div class="row">
       <div class="col m8 center">
-        <cl-image public-id="{{$ctrl.study[0].headerImage.cloudinary.public_id}}">
+        <cl-image public-id="{{$ctrl.study.headerImage.cloudinary.public_id}}">
           <cl-transformation height="350" width="550" crop="fill"/>
         </cl-image>
       </div>
       <div class="col m4">
-        <p class="study-detail-funding">Funding Needed: {{$ctrl.study[0].fundingneeded | currency}}</p>
+        <p class="study-detail-funding">Funding Needed: {{$ctrl.study.fundingneeded | currency}}</p>
         <div class="center">
           <payment-form></payment-form>
         </div>
@@ -31,8 +31,8 @@
 
     <div class="row">
       <div class="col m8">
-        <p class="study-detail-heading">Description: {{$ctrl.study[0].description}}</p>
-        <p class="study-detail-heading">Additional Information: {{$ctrl.study[0].additionalinfo}}</p>
+        <p class="study-detail-heading">Description: {{$ctrl.study.description}}</p>
+        <p class="study-detail-heading">Additional Information: {{$ctrl.study.additionalinfo}}</p>
       </div>
     </div>
 

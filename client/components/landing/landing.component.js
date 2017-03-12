@@ -5,14 +5,13 @@
     templateUrl: '/components/landing/landing.html',
   });
 
-  function landingController(){
+  function landingController($state){
     var vm = this;
     vm.login = false;
 
-
-
-
-
+    vm.createAccount = function(){
+      $state.go('newProfileRoute');
+    };
 
   }
 

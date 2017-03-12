@@ -12,18 +12,23 @@
     var vm = this;
     console.log(vm);
 
-    vm.$onChanges = function(){
-      vm.study = angular.copy(vm.studyInfo);
+    vm.$onChanges = function(changesObj){
+      if (changesObj.studyInfo) {
+        vm.study = angular.copy(vm.studyInfo);
+        console.log(vm.study);
+      }
     };
 
     vm.getComments = function(){
       vm.showPaymentForm = false;
       vm.showComments = !vm.showComments;
+      console.log('vm.study', vm.study);
+      console.log('vm.study.id', vm.study.id);
       Comment.find({
         filter: {
           include: 'user',
           where: {
-            studyid: vm.id
+            studyid: vm.study.id
           },
         }
       }).$promise
@@ -55,7 +60,7 @@
       };
 
       vm.deleteComment = function(data){
-        
+
         Comment.deleteById({
           id: data.id
         }).$promise

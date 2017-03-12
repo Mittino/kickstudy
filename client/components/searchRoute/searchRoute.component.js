@@ -12,7 +12,7 @@
      vm.$onInit = function getStudies(){
        Study.find({
          filter: {
-          include: ['headerImage', 'researcher', 'comments']
+          include: ['headerImage', 'researcher']
          }
        }).$promise
          .then(function(response){
