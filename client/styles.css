@@ -125,6 +125,9 @@ ul.circle {
   background-color: #93CDD6;
 }
 
+.comment{
+  font-style: italic;
+}
 
 
 @media (max-width: 700px){

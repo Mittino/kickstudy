@@ -42,7 +42,8 @@
           <button class="waves-effect waves-light btn center" ng-click="$ctrl.getComments()"> View Comments </button>
         </div>
         <!-- show comment form -->
-        <div ng-if="$ctrl.showComments" class="card-title"> Comments
+        <div ng-if="$ctrl.showComments">
+          <p class="card-title">Comments</p>
 
         <comment comment="comment" ng-repeat="comment in $ctrl.comments track by comment.id | orderBy: 'date'" delete-comment="$ctrl.deleteComment(data)"></comment>
 

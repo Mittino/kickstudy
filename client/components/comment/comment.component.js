@@ -5,7 +5,7 @@
       templateUrl: 'components/comment/comment.html',
       bindings: {
         comment: '<',
-        editComment: '&',
+        //editComment: '&',
         deleteComment: '&'
       }
     });
@@ -14,15 +14,15 @@
     var vm = this;
     vm.userid = User.getCurrentId();
 
-    vm.$onInit = function(){
-      if (vm.userid === this.userid){
+    vm.$onChanges = function(){
+      if (vm.userid === this.comment.userid){
         vm.isOwner = true;
       }
     };
 
-    vm.edit = function(){
-      vm.editComment()
-    };
+    // vm.edit = function(){
+    //   vm.editComment()
+    // };
 
     vm.delete = function(){
       console.log(vm.comment);

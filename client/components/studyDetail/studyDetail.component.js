@@ -37,14 +37,17 @@
 
       vm.postComment = function(){
         vm.userid = User.getCurrentId();
-        console.log(vm.userid);
-        vm.newComment.userid = User.getCurrentId();
+        vm.current = User.getCurrent();
+
+        vm.newComment.userid = vm.userid;
         vm.newComment.studyid = this.study[0].id;
         vm.newComment.date = moment();
 
         Comment.create(vm.newComment).$promise
         .then(function(response){
           console.log(response);
+          response.user={};
+          response.user.nickname = vm.current.nickname;
           vm.comments.push(response);
         }).catch(function(err){
           console.log(err);
@@ -52,7 +55,7 @@
       };
 
       vm.deleteComment = function(data){
-        console.log(data);
+        
         Comment.deleteById({
           id: data.id
         }).$promise
