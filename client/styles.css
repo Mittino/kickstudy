@@ -108,6 +108,29 @@ ul.circle {
   margin: 15px;
 }
 
+.input-field .prefix.active{
+  color: black !important;
+}
+
+#search-card{
+  margin-top: 30px;
+}
+
+#search-icon{
+  margin-top: 5px;
+}
+
+#searchInput{
+  border: none;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#searchInput:focus{
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
 .login{
   margin: 40px 0 15px 0;
   padding: 40px 0 40px 0;
@@ -146,6 +169,11 @@ ul.circle {
   background-color:#D64933;
   margin-bottom: 15px;
 }
+
+.btn:focus{
+  background-color: #D64933;
+}
+
 .btn:hover{
   background-color: #93CDD6;
 }

@@ -4,14 +4,17 @@
 
 <div>
   <div class="row">
-    <div class="card col offset-m2 m8">
-      <div class="card-content black-text">
-        <input type="search" placeholder="Filter Results" ng-model="searchText">
+    <div id="search-card" class="card col offset-m1 m10">
+
+      <div class="input-field col m10">
+        <i id="search-icon" class="material-icons prefix">search</i>
+        <input id="searchInput" type="text" placeholder="Search for studies..." ng-model="$ctrl.searchText">
       </div>
     </div>
+
   </div>
 </div>
 
 <div class="study-card-container">
-  <study study="study" ng-repeat="study in $ctrl.studies | filter:searchText" handle-study-click="$ctrl.clickedStudy(studyid)" ></study>
+  <study study="study" ng-repeat="study in $ctrl.studies | filter:$ctrl.searchText" handle-study-click="$ctrl.clickedStudy(studyid)" ></study>
 </div>
