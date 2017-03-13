@@ -128,10 +128,10 @@ ul.circle {
 
 .study-card-container study {
   width: 25%;
-  cursor: pointer;
+
 }
 
-.study-card-container study:hover img {
+.study-card-container .study-card:hover img {
   opacity: .75;
   transition: opacity 200ms linear;
 }
@@ -139,6 +139,7 @@ ul.circle {
 .study-card{
   height: 400px;
   margin: 10px 10px 10px 10px;
+  cursor: pointer;
 }
 
 .btn{
