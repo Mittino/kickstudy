@@ -122,11 +122,21 @@ ul.circle {
   flex-wrap: wrap;
   flex-direction: row;
   align-content: flex-start;
-  justify-content: space-around;;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.study-card-container study {
+  width: 25%;
+  cursor: pointer;
+}
+
+.study-card-container study:hover img {
+  opacity: .75;
+  transition: opacity 200ms linear;
 }
 
 .study-card{
-  width: 250px;
   height: 400px;
   margin: 10px 10px 10px 10px;
 }
@@ -143,8 +153,30 @@ ul.circle {
   font-style: italic;
 }
 
+@media (max-width: 1000px){
+  .study-card-container study {
+    width: calc(100%/3);
+  }
+  .small-card-container{
+    display: flex;
+    margin-left:75px;
+    margin-right:75px;
+    flex-wrap: wrap;
+  }
+  .small-card-size{
+    flex: 1 1 45%;
+    margin: 15px;
+  }
+  nav ul {
+    display: flex;
+    flex-flow: row;
+  }
+}
 
 @media (max-width: 700px){
+    .study-card-container study {
+      width: 50%;
+    }
     .card-container{
       display: flex;
       margin-left:75px;
@@ -177,21 +209,4 @@ ul.circle {
       margin-right: 5px;
     }
 
-}
-
-@media (max-width: 1000px){
-  .small-card-container{
-    display: flex;
-    margin-left:75px;
-    margin-right:75px;
-    flex-wrap: wrap;
-  }
-  .small-card-size{
-    flex: 1 1 45%;
-    margin: 15px;
-  }
-  nav ul {
-    display: flex;
-    flex-flow: row;
-  }
 }
