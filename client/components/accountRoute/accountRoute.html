@@ -10,7 +10,7 @@
 </div>
 
 <div ng-if="$ctrl.profile">
-  <profile user="$ctrl.user"></profile>
+  <profile user="$ctrl.user" submit-user-data="$ctrl.submitUserForm(data)"></profile>
 </div>
 
 <div ng-if="$ctrl.payment">

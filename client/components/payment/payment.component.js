@@ -10,12 +10,9 @@
 
 
 
-    function paymentController(moment){
+    function paymentController(){
       var vm = this;
 
-      vm.$onChanges = function(){
-        console.log(vm.payment, "payment");
-      };
 
     }
 
