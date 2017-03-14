@@ -41,6 +41,10 @@ h5{
   font-family: 'Merriweather', serif;
 }
 
+strong{
+  font-weight: bold;
+}
+
 .slider .indicators .indicator-item {
   background-color: lightgrey;
 }
