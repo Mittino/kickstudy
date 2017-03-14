@@ -18,7 +18,7 @@
         .then(function(response){
           // console.log(response);
           LoopBackAuth.currentUserData = response;
-          $state.go('homeRoute');
+          $state.go('searchRoute');
         }).catch(function(error){
           console.log(error);
 

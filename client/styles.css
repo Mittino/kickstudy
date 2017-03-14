@@ -116,12 +116,41 @@ ul.circle {
   color: black !important;
 }
 
+input[type=text].valid{
+  border-bottom: black;
+  box-shadow: 0 1px 0 0 black;
+}
+
+input[type=text]:focus.valid{
+  border-bottom: black;
+  box-shadow: 0 1px 0 0 black;
+}
+
+input[type=text]:focus:not([readonly]){
+  border-bottom: black;
+  box-shadow: 0 1px 0 0 black;
+}
+
+input[type=password]:focus:not([readonly]){
+  border-bottom: black;
+  box-shadow: 0 1px 0 0 black;
+}
+
+input[type=text]:focus:not([readonly])+label{
+  color: grey;
+}
+
+input[type=password]:focus:not([readonly])+label{
+  color: grey;
+}
+
 #search-card{
   margin-top: 30px;
 }
 
 #search-icon{
   margin-top: 5px;
+  margin-left: 9px;
 }
 
 #searchInput{

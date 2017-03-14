@@ -45,7 +45,7 @@
         vm.current = User.getCurrent();
 
         vm.newComment.userid = vm.userid;
-        vm.newComment.studyid = this.study[0].id;
+        vm.newComment.studyid = this.study.id;
         vm.newComment.date = moment();
 
         Comment.create(vm.newComment).$promise

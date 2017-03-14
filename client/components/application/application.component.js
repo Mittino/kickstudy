@@ -11,10 +11,6 @@
       var vm = this;
       vm.User = User;
 
-    // vm.$onInit = function() {
-    //   vm.status = User.isAuthenticated();
-    //   console.log(vm.status);
-    // };
       vm.login = function(){
          $state.go('login');
       };
@@ -32,12 +28,8 @@
         $state.go('landingRoute');
       };
 
-      vm.home = function(){
-        $state.go('homeRoute');
-      };
-
-      vm.editProfile = function(){
-        $state.go('editProfileRoute');
+      vm.account = function(){
+        $state.go('accountRoute');
       };
 
 
