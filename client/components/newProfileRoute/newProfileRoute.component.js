@@ -5,7 +5,7 @@
       templateUrl: "/components/newProfileRoute/newProfileRoute.html"
     });
 
-  function newProfileRouteController(){
+  function newProfileRouteController(User, $state){
     var vm = this;
 
     vm.submitUserForm = function(data){

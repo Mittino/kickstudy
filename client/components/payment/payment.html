@@ -1,6 +1,6 @@
 
 <div class="card card-padding">
   <p><strong>Study Name:</strong> {{$ctrl.payment.study.title}}</p>
-  <p><strong>Amount:</strong> {{$ctrl.payment.amount | currency}}</p>
+  <p><strong>Amount:</strong> {{($ctrl.payment.amount/ 100) | currency}}</p>
   <p><strong>Date:</strong> {{$ctrl.payment.date | amDateFormat:'dddd, MMMM Do YYYY'}}</p>
 </div>

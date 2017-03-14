@@ -21,6 +21,6 @@
 
 <div class="card-panel grey lighten-2" ng-if="$ctrl.paymentSuccess">
   <span>
-    Thank you for your payment! Your card was successfully charged for {{$ctrl.payment.amount | currency}}. You will see a charge description for "{{$ctrl.payment.description}}."
+    Thank you for your payment! Your card was successfully charged for {{($ctrl.payment.amount / 100) | currency}}. You will see a charge description for "{{$ctrl.payment.description}}."
   </span>
 </div>

@@ -22,7 +22,7 @@
         vm.pendingPayment = true;
 
         Payment.makePayment({
-          amount: vm.paymentAmount,
+          amount: formatAmount(vm.paymentAmount),
           tokenId: token.id,
           studyId: $stateParams.id,
           userId: userId
@@ -42,14 +42,21 @@
 
     vm.showPymtForm = function(){
       vm.showComments = false;
-      // vm.showPaymentForm = !vm.showPaymentForm;
 
-      stripeHandler.open({
-        name: 'Kickstudy',
-        description: 'Fund a Study',
-        amount: Math.abs(vm.paymentAmount * 100)
-      });
+      if(_.isNumber(vm.paymentAmount) && vm.paymentAmount > 0.5){
+        stripeHandler.open({
+          name: 'Kickstudy',
+          description: 'Fund a Study',
+          amount: formatAmount(vm.paymentAmount)
+        });
+      } else {
+        Materialize.toast("Please enter payment amount greater than 0.50", 4000);
+      }
     };
+
+    function formatAmount(amount) {
+      return Math.abs(amount * 100);
+    }
   }
 
 })();
