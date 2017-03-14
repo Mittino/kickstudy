@@ -135,13 +135,12 @@ ul.circle {
   box-shadow: none !important;
 }
 
-.login{
-  margin: 40px 0 15px 0;
-  padding: 40px 0 40px 0;
-}
-
 .card-padding {
   padding: 15px 15px 15px 15px;
+}
+
+.row .col{
+  padding: 0;
 }
 
 .study-card-container{
@@ -155,7 +154,6 @@ ul.circle {
 
 .study-card-container study {
   width: 25%;
-
 }
 
 .study-card-container .study-card:hover img {
@@ -184,6 +182,24 @@ ul.circle {
 
 .comment{
   font-style: italic;
+}
+
+.account-tabs{
+  margin-top: 40px;
+}
+
+.account-tabs .tabs .tab a{
+  color: black;
+  font-size: 18px;
+  font-family: 'Hind Vadodara', sans-serif;
+}
+
+.tabs .indicator{
+  background-color: #D64933;
+}
+
+.tabs .tab{
+  text-transform: none;
 }
 
 @media (max-width: 1000px){

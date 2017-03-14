@@ -1,6 +1,6 @@
 <form ng-submit="$ctrl.submitStudyForm()">
   <div class="row">
-    <div class="card col s8 offset-s2 login">
+    <div class="card col s8 offset-s2">
 
       <div class= "row">
         <div class="input-field col offset-m1 m4 s12">
@@ -25,7 +25,7 @@
     </div>
 
     <div id="direct_upload"
-        ngf-drop="$ctrl.uploadImage(files)"    
+        ngf-drop="$ctrl.uploadImage(files)"
         ng-model="files"
         ng-multiple="true">
 

@@ -82,6 +82,11 @@
         url:'/createStudy',
         component:'createStudyRoute',
         parent:'application'
+      })
+      .state('accountRoute', {
+        url:'/account',
+        component:'accountRoute',
+        parent:'application'
       });
 
   }
